@@ -27,7 +27,7 @@ Commit `bb4105e` — `GATE_CS_Topicwise_Questions.md`
 
 ## 5. Practice questions
 Commit `440de14` — `GATE_CS_Practice_Questions.md`
-- 94 new questions: one 1-mark and one 2-mark question for each of the 47 topics, in MCQ, MSQ and NAT styles.
+- 95 new questions: one 1-mark and one 2-mark question for each of the 47 topics (Dynamic programming has a third), in MCQ, MSQ and NAT styles.
 - Answers and short solutions are in collapsible blocks.
 - Numerical and program-output answers were checked by running code.
 - The questions are my own and follow the past-paper patterns. Three are standard textbook examples: Huffman frequencies, the Banker's algorithm table and job sequencing.
@@ -58,6 +58,14 @@ One notes PDF per subject, named `GATE_CS_<Subject>_Notes.pdf` (same subjects as
 ## 10. Study plan
 `STUDY_PLAN.md` — a 14-week plan from 2 Nov 2026 (subject-by-subject learning, full past papers, mocks and final revision). Assumes about 27 hours per week.
 
+## 11. Practice website
+`index.html` + `assets/` (plain HTML, CSS and JavaScript, no build step). Open `index.html` in a browser, or publish the repo root with GitHub Pages.
+- 95 questions (MCQ, MSQ, NAT) with answers and solutions, from `GATE_CS_Practice_Questions.md`. Data is in `assets/questions.js`.
+- Practice mode with instant feedback; timed test mode with GATE-style marking (−⅓ / −⅔ for wrong MCQs; no negative marking for MSQ and NAT).
+- Filters by subject, topic, type and status (unattempted, wrong last time, bookmarked); bookmarks; progress by subject and weakest topics; dark mode.
+- Progress is saved in the browser only (localStorage). A Resources page links the PDFs and the study plan.
+- The 818 past questions are not in the quiz yet because they have no answer keys.
+
 ## Repo layout
 ```
 GATE2027/
@@ -66,6 +74,9 @@ GATE2027/
 ├── GATE_CS_Practice_Questions.md
 ├── GATE_CS_<Subject>.pdf          (10 subjects: past questions + practice with solutions)
 ├── GATE_CS_<Subject>_Notes.pdf    (10 subjects: study notes)
+├── STUDY_PLAN.md
+├── index.html, assets/            (practice website)
+├── README.md
 ├── workdone.md
 └── pAPER/
     ├── CS_GATE2027_Syllabus.pdf
