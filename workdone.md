@@ -75,15 +75,24 @@ One notes PDF per subject, named `GATE_CS_<Subject>_Notes.pdf` (same subjects as
 ## 13. DA papers added
 `DA/papers/` now holds the GATE DA papers for 2024 (IISc Bengaluru, Set 1), 2025 (IIT Roorkee) and 2026 (IIT Guwahati), plus the official GATE 2027 DA syllabus (organising institute IIT Madras). Each paper has 65 questions (10 General Aptitude for 15 marks, 55 technical for 85 marks) and is text-extractable, so no OCR is needed. The 2026 official answer key (`2026_DA_Key.pdf`, plus a parsed `2026_DA_key.json`) was added later. The 2024 key (`DA/papers/2024/2024_DA_key.json`) was read from the IIT Guwahati-hosted `DAFinalAnswerKey.pdf` via a summarising fetch tool, not the raw PDF. Only Q1–Q5 were checked against the paper (all matched), so confirm it against the official PDF before relying on it. The 2025 key is still missing; its PDF is behind the GATE 2025 candidate login.
 
+## 14. DA website, study plan, notes and analysis
+- **Website:** now opens in **DA mode** (the "Switch to CS/DA" button in the header toggles; the choice is saved in the browser). DA mode holds **129 real past questions** from GATE DA 2026 (65, official key) and 2024 (64, key not yet double-checked; Q59 is left out because it is marks-to-all). Each question is shown as an image cropped from the paper (so figures, tables and maths are exact), answered by option letter or number, with GATE-style marking. NAT keys are ranges and are checked as ranges. Section filter: Probability & Statistics, Linear Algebra, Calculus & Optimisation, Programming/DSA, Databases & Warehousing, Machine Learning, AI, General Aptitude; the topic filter selects the paper year. Sections were tagged by hand from the question text, so a few may be debatable.
+- **2024 key:** `DA/papers/2024/2024_DA_key.json`, read from the IIT Guwahati-hosted PDF through a summarising fetch. Q1–Q5, Q30 (2026) and Q62 were solved by hand and matched; the rest are unchecked. The 2025 key is still missing, so 2025 is not in the quiz.
+- **Files:** `assets/da_questions.js`, `assets/img/da2026/`, `assets/img/da2024/`.
+- **Study plan:** `DA/STUDY_PLAN.md` (14 weeks from 2 Nov 2026, weighted by the paper analysis).
+- **Paper analysis:** `DA/analysis/GATE_DA_Paper_Analysis.md` (marks per section for 2026 and 2024).
+- **Notes:** `DA/notes/GATE_DA_Notes_ML_AI.pdf` and `GATE_DA_Notes_Maths_Programming_DB.pdf`, written from my own knowledge against the official syllabus; check the less common facts.
+
 ## Repo layout
 ```
 GATE2027/
 ├── README.md, workdone.md
-├── index.html, assets/, .nojekyll      practice website (95 CS questions for now)
+├── index.html, assets/, .nojekyll      practice website (129 DA past questions + 95 CS practice questions)
 ├── DA/
-│   ├── papers/      (upload the DA papers here)
-│   ├── questions/   (to be built)
-│   └── notes/       (to be built)
+│   ├── papers/      2024/2025/2026 papers, keys (2024, 2026), syllabus
+│   ├── analysis/    GATE_DA_Paper_Analysis.md
+│   ├── notes/       2 notes PDFs (+ .md sources)
+│   └── STUDY_PLAN.md
 └── CS/
     ├── papers/      CS papers 2016–2026 by year + syllabus
     ├── questions/   GATE_CS_<Subject>.pdf (10 subjects)
@@ -94,11 +103,7 @@ GATE2027/
 Note: earlier sections above name files by their old locations; they are now under `CS/` as shown here.
 
 ## Possible next steps
-- Upload the official answer keys for the DA papers to `DA/papers/<year>/`. Then analyse the DA papers and build DA question PDFs, notes, a DA study plan and a DA version of the website.
-- Write Machine Learning and AI notes.
-- Replace the three textbook-style practice questions with fresh ones.
-- Add more practice questions for Tier 1 topics.
-- Add the General Aptitude section (15 marks per paper).
-- Fill in answer keys for the past questions.
-- Build full-length mock papers of 65 questions that follow the real GATE mark distribution.
-- Fix the OCR gaps in 2019 and 2021 so every paper totals 85 marks.
+- Add the 2025 DA paper to the quiz once its answer key is attached; double-check the 2024 key against the official PDF.
+- Add new original DA practice questions (ML, AI, Probability) with solutions, and DA question PDFs.
+- Full-length timed DA mock from the 129 questions (65 questions, 3 hours).
+- CS: answer keys for the past questions (for your friend); OCR fixes for 2019 and 2021.

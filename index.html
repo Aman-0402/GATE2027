@@ -10,21 +10,23 @@
 <body>
 <header class="top">
   <div class="wrap bar">
-    <a class="brand" href="#home" data-nav="home">GATE CS <span>2027</span></a>
+    <a class="brand" id="brand" href="#home" data-nav="home">GATE CS <span>2027</span></a>
     <nav>
       <button data-nav="home">Home</button>
       <button data-nav="practice">Practice</button>
       <button data-nav="progress">Progress</button>
       <button data-nav="resources">Resources</button>
     </nav>
+    <button id="dsBtn" class="btn ghost sm" type="button">Switch to CS</button>
     <button id="themeBtn" class="icon" aria-label="Toggle dark mode">☾</button>
   </div>
 </header>
 <main class="wrap" id="app" aria-live="polite"></main>
 <footer class="wrap foot">
-  Original practice questions modelled on 2016–2026 paper patterns. Progress is saved only in this browser.
+  DA mode: real GATE DA past questions with official keys. CS mode: original practice questions modelled on 2016–2026 paper patterns. Progress is saved only in this browser.
 </footer>
 <script src="assets/questions.js"></script>
+<script src="assets/da_questions.js"></script>
 <script src="assets/app.js"></script>
 </body>
 </html>

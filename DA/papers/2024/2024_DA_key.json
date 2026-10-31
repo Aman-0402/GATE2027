@@ -2,326 +2,391 @@
  {
   "q": 1,
   "type": "MCQ",
-  "key": "D"
+  "key": "D",
+  "marks": 1
  },
  {
   "q": 2,
   "type": "MCQ",
-  "key": "A"
+  "key": "A",
+  "marks": 1
  },
  {
   "q": 3,
   "type": "MCQ",
-  "key": "B"
+  "key": "B",
+  "marks": 1
  },
  {
   "q": 4,
   "type": "MCQ",
-  "key": "B"
+  "key": "B",
+  "marks": 1
  },
  {
   "q": 5,
   "type": "MCQ",
-  "key": "B"
+  "key": "B",
+  "marks": 1
  },
  {
   "q": 6,
   "type": "MCQ",
-  "key": "D"
+  "key": "D",
+  "marks": 2
  },
  {
   "q": 7,
   "type": "MCQ",
-  "key": "A"
+  "key": "A",
+  "marks": 2
  },
  {
   "q": 8,
   "type": "MCQ",
-  "key": "B"
+  "key": "B",
+  "marks": 2
  },
  {
   "q": 9,
   "type": "MCQ",
-  "key": "A"
+  "key": "A",
+  "marks": 2
  },
  {
   "q": 10,
   "type": "MCQ",
-  "key": "A"
+  "key": "A",
+  "marks": 2
  },
  {
   "q": 11,
   "type": "MCQ",
-  "key": "A"
+  "key": "A",
+  "marks": 1
  },
  {
   "q": 12,
   "type": "MCQ",
-  "key": "A"
+  "key": "A",
+  "marks": 1
  },
  {
   "q": 13,
   "type": "MCQ",
-  "key": "B"
+  "key": "B",
+  "marks": 1
  },
  {
   "q": 14,
   "type": "MCQ",
-  "key": "A"
+  "key": "A",
+  "marks": 1
  },
  {
   "q": 15,
   "type": "MCQ",
-  "key": "A"
+  "key": "A",
+  "marks": 1
  },
  {
   "q": 16,
   "type": "MCQ",
-  "key": "A"
+  "key": "A",
+  "marks": 1
  },
  {
   "q": 17,
   "type": "MCQ",
-  "key": "D"
+  "key": "D",
+  "marks": 1
  },
  {
   "q": 18,
   "type": "MCQ",
-  "key": "C"
+  "key": "C",
+  "marks": 1
  },
  {
   "q": 19,
   "type": "MCQ",
-  "key": "D"
+  "key": "D",
+  "marks": 1
  },
  {
   "q": 20,
   "type": "MCQ",
-  "key": "B"
+  "key": "B",
+  "marks": 1
  },
  {
   "q": 21,
   "type": "MCQ",
-  "key": "B"
+  "key": "B",
+  "marks": 1
  },
  {
   "q": 22,
   "type": "MCQ",
-  "key": "A"
+  "key": "A",
+  "marks": 1
  },
  {
   "q": 23,
   "type": "MCQ",
-  "key": "D"
+  "key": "D",
+  "marks": 1
  },
  {
   "q": 24,
   "type": "MCQ",
-  "key": "C"
+  "key": "C",
+  "marks": 1
  },
  {
   "q": 25,
   "type": "MCQ",
-  "key": "C"
+  "key": "C",
+  "marks": 1
  },
  {
   "q": 26,
   "type": "MCQ",
-  "key": "C"
+  "key": "C",
+  "marks": 1
  },
  {
   "q": 27,
   "type": "MCQ",
-  "key": "B"
+  "key": "B",
+  "marks": 1
  },
  {
   "q": 28,
   "type": "MSQ",
-  "key": "A;B;C"
+  "key": "A;B;C",
+  "marks": 1
  },
  {
   "q": 29,
   "type": "MSQ",
-  "key": "B;C;D"
+  "key": "B;C;D",
+  "marks": 1
  },
  {
   "q": 30,
   "type": "NAT",
-  "key": "0 to 0"
+  "key": "0 to 0",
+  "marks": 1
  },
  {
   "q": 31,
   "type": "NAT",
-  "key": "3 to 3"
+  "key": "3 to 3",
+  "marks": 1
  },
  {
   "q": 32,
   "type": "NAT",
-  "key": "17 to 17"
+  "key": "17 to 17",
+  "marks": 1
  },
  {
   "q": 33,
   "type": "NAT",
-  "key": "0.24 to 0.24"
+  "key": "0.24 to 0.24",
+  "marks": 1
  },
  {
   "q": 34,
   "type": "NAT",
-  "key": "42 to 42"
+  "key": "42 to 42",
+  "marks": 1
  },
  {
   "q": 35,
   "type": "NAT",
-  "key": "0 to 0"
+  "key": "0 to 0",
+  "marks": 1
  },
  {
   "q": 36,
   "type": "MCQ",
-  "key": "C"
+  "key": "C",
+  "marks": 2
  },
  {
   "q": 37,
   "type": "MCQ",
-  "key": "A"
+  "key": "A",
+  "marks": 2
  },
  {
   "q": 38,
   "type": "MCQ",
-  "key": "D"
+  "key": "D",
+  "marks": 2
  },
  {
   "q": 39,
   "type": "MCQ",
-  "key": "C"
+  "key": "C",
+  "marks": 2
  },
  {
   "q": 40,
   "type": "MCQ",
-  "key": "A"
+  "key": "A",
+  "marks": 2
  },
  {
   "q": 41,
   "type": "MCQ",
-  "key": "C"
+  "key": "C",
+  "marks": 2
  },
  {
   "q": 42,
   "type": "MCQ",
-  "key": "A"
+  "key": "A",
+  "marks": 2
  },
  {
   "q": 43,
   "type": "MCQ",
-  "key": "A"
+  "key": "A",
+  "marks": 2
  },
  {
   "q": 44,
   "type": "MCQ",
-  "key": "C"
+  "key": "C",
+  "marks": 2
  },
  {
   "q": 45,
   "type": "MCQ",
-  "key": "B"
+  "key": "B",
+  "marks": 2
  },
  {
   "q": 46,
   "type": "MSQ",
-  "key": "A;B;D"
+  "key": "A;B;D",
+  "marks": 2
  },
  {
   "q": 47,
   "type": "MSQ",
-  "key": "A;C"
+  "key": "A;C",
+  "marks": 2
  },
  {
   "q": 48,
   "type": "MSQ",
-  "key": "B;D"
+  "key": "B;D",
+  "marks": 2
  },
  {
   "q": 49,
   "type": "MSQ",
-  "key": "B;C;D"
+  "key": "B;C;D",
+  "marks": 2
  },
  {
   "q": 50,
   "type": "MSQ",
-  "key": "A;B"
+  "key": "A;B",
+  "marks": 2
  },
  {
   "q": 51,
   "type": "MSQ",
-  "key": "B;D"
+  "key": "B;D",
+  "marks": 2
  },
  {
   "q": 52,
   "type": "MSQ",
-  "key": "A;B;C"
+  "key": "A;B;C",
+  "marks": 2
  },
  {
   "q": 53,
   "type": "MSQ",
-  "key": "A;D"
+  "key": "A;D",
+  "marks": 2
  },
  {
   "q": 54,
   "type": "MSQ",
-  "key": "A;C"
+  "key": "A;C",
+  "marks": 2
  },
  {
   "q": 55,
   "type": "MSQ",
-  "key": "A;B"
+  "key": "A;B",
+  "marks": 2
  },
  {
   "q": 56,
   "type": "NAT",
-  "key": "0.125 to 0.125"
+  "key": "0.125 to 0.125",
+  "marks": 2
  },
  {
   "q": 57,
   "type": "NAT",
-  "key": "0.2 to 0.2"
+  "key": "0.2 to 0.2",
+  "marks": 2
  },
  {
   "q": 58,
   "type": "NAT",
-  "key": "0.25 to 0.25"
+  "key": "0.25 to 0.25",
+  "marks": 2
  },
  {
   "q": 59,
   "type": "NAT",
-  "key": "MTA"
+  "key": "MTA",
+  "marks": 2
  },
  {
   "q": 60,
   "type": "NAT",
-  "key": "0.5 to 0.5"
+  "key": "0.5 to 0.5",
+  "marks": 2
  },
  {
   "q": 61,
   "type": "NAT",
-  "key": "55 to 55"
+  "key": "55 to 55",
+  "marks": 2
  },
  {
   "q": 62,
   "type": "NAT",
-  "key": "0.12 to 0.13"
+  "key": "0.12 to 0.13",
+  "marks": 2
  },
  {
   "q": 63,
   "type": "NAT",
-  "key": "5 to 5"
+  "key": "5 to 5",
+  "marks": 2
  },
  {
   "q": 64,
   "type": "NAT",
-  "key": "0.125 to 0.125"
+  "key": "0.125 to 0.125",
+  "marks": 2
  },
  {
   "q": 65,
   "type": "NAT",
-  "key": "0.062 to 0.063"
+  "key": "0.062 to 0.063",
+  "marks": 2
  }
 ]

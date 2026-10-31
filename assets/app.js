@@ -1,7 +1,11 @@
 (function () {
   "use strict";
-  var Q = window.QUESTIONS || [];
-  var BYID = {}; Q.forEach(function (q) { BYID[q.id] = q; });
+  var DS = "DA";
+  try { DS = localStorage.getItem("gate27.ds") || "DA"; } catch (e) {}
+  if (DS !== "CS" && DS !== "DA") DS = "DA";
+  var Q = (DS === "CS" ? window.QUESTIONS : window.DA_QUESTIONS) || [];
+  var ALLQ = (window.QUESTIONS || []).concat(window.DA_QUESTIONS || []);
+  var BYID = {}; ALLQ.forEach(function (q) { BYID[q.id] = q; });
   var KEY = "gate27.v1";
   var app = document.getElementById("app");
   var SUBJECTS = [];
@@ -39,6 +43,7 @@
     if (a === undefined || a === null) return false;
     if (q.type === "NAT") {
       var x = parseFloat(String(a).replace(",", ".")); if (isNaN(x)) return false;
+      if (q.range) return x >= q.range[0] - 1e-9 && x <= q.range[1] + 1e-9;
       var y = parseFloat(q.answer); var tol = 0.5 * Math.pow(10, -decimals(q.answer)) + 1e-9;
       return Math.abs(x - y) <= tol;
     }
@@ -57,7 +62,7 @@
     if (isCorrect(q, a)) return q.marks;
     return q.type === "MCQ" ? -q.marks / 3 : 0;
   }
-  function fmtAnswer(q) { return q.type === "NAT" ? q.answer : q.answer.join(", "); }
+  function fmtAnswer(q) { return q.type === "NAT" ? String(q.answer) : q.answer.join(", "); }
 
   /* ---------- views ---------- */
   var view = "home", sess = null;
@@ -89,7 +94,7 @@
   function renderHome() {
     var o = overall(), marked = Object.keys(S.marked).filter(function (k) { return S.marked[k] && BYID[k]; }).length;
     app.innerHTML =
-      "<h1>GATE CS 2027 practice</h1><p class='sub'>" + Q.length + " original questions across " + SUBJECTS.length + " subjects, modelled on the 2016–2026 papers. MCQ, MSQ and NAT, with solutions.</p>" +
+      (DS === "DA" ? "<h1>GATE DA 2027 practice</h1><p class='sub'>" + Q.length + " real past-paper questions (2026 and 2024) across " + SUBJECTS.length + " sections, shown as in the paper, with the official answer key. The 2024 key is not fully verified yet.</p>" : "<h1>GATE CS 2027 practice</h1><p class='sub'>" + Q.length + " original questions across " + SUBJECTS.length + " subjects, modelled on the 2016–2026 papers. MCQ, MSQ and NAT, with solutions.</p>") +
       "<div class='grid'>" +
       "<div class='stat'><b>" + o.seen + "/" + Q.length + "</b><span>questions attempted</span></div>" +
       "<div class='stat'><b>" + pct(o.cor, o.att) + "%</b><span>accuracy (" + o.cor + "/" + o.att + ")</span></div>" +
@@ -176,7 +181,7 @@
     var h = "<div class='prog'><span>Question " + (sess.i + 1) + " of " + n + "</span>" + (test ? "<span class='timer' id='timer'></span>" : "<span>" + esc(q.subjectName) + "</span>") + "</div>" +
       "<div class='bar2'><i style='width:" + pct(sess.i + (chk ? 1 : 0), n) + "%'></i></div>" +
       "<div class='card q qgrid'><div class='qleft'><div class='meta'><span class='chip t'>" + q.type + "</span><span class='chip'>" + q.marks + " mark" + (q.marks > 1 ? "s" : "") + "</span><span class='chip'>" + esc(q.topic) + "</span></div>" +
-      (q.context ? q.context : "") + q.question + "</div><div class='qright'>";
+      (q.context ? q.context : "") + q.question + (q.unverified ? "<p class='sub'>Key from the 2024 answer sheet, not yet double-checked.</p>" : "") + "</div><div class='qright'>";
     if (q.type === "NAT") {
       h += "<div class='nat'><label class='f'>Your answer (number)</label><input id='natIn' type='text' inputmode='decimal' autocomplete='off' value='" + esc(a === undefined ? "" : a) + "'" + (chk ? " disabled" : "") + "></div>";
     } else {
@@ -281,11 +286,25 @@
   /* ---------- resources ---------- */
   var PDFS = [["Engineering_Maths", "Engineering Mathematics"], ["Programming_and_Data_Structures", "Programming & Data Structures"], ["Algorithms", "Algorithms"], ["Theory_of_Computation", "Theory of Computation"], ["Compiler_Design", "Compiler Design"], ["Operating_System", "Operating System"], ["Computer_Networks", "Computer Networks"], ["Computer_Organization", "Computer Organization & Architecture"], ["Databases", "Databases"], ["Digital_Logic", "Digital Logic"]];
   function renderResources() {
+    if (DS === "DA") {
+      app.innerHTML = "<h1>Resources — GATE DA</h1><p class='sub'>Files from the repo.</p>" +
+        "<h2>Past papers</h2><div class='card res'><a href='DA/papers/2026/2026_DA.pdf' target='_blank' rel='noopener'>2026 paper (IIT Guwahati)</a><a href='DA/papers/2026/2026_DA_Key.pdf' target='_blank' rel='noopener'>2026 official answer key</a><a href='DA/papers/2025/2025_DA.pdf' target='_blank' rel='noopener'>2025 paper (IIT Roorkee) — key not added yet</a><a href='DA/papers/2024/2024_DA_Set1.pdf' target='_blank' rel='noopener'>2024 paper (IISc, Set 1)</a><a href='DA/papers/DA_GATE2027_Syllabus.pdf' target='_blank' rel='noopener'>GATE 2027 DA syllabus</a></div>" +
+        "<h2>Plan and notes</h2><div class='card res'><a href='DA/STUDY_PLAN.md' target='_blank' rel='noopener'>14-week DA study plan</a><a href='DA/notes/GATE_DA_Notes_ML_AI.pdf' target='_blank' rel='noopener'>Machine Learning and AI notes</a><a href='DA/notes/GATE_DA_Notes_Maths_Programming_DB.pdf' target='_blank' rel='noopener'>Maths, Programming and Databases notes</a><a href='DA/analysis/GATE_DA_Paper_Analysis.md' target='_blank' rel='noopener'>DA paper analysis (2024–2026)</a></div>" +
+        "<h2>CS material that overlaps with DA</h2><div class='card res'><a href='CS/questions/GATE_CS_Databases.pdf' target='_blank' rel='noopener'>Databases questions</a><a href='CS/questions/GATE_CS_Algorithms.pdf' target='_blank' rel='noopener'>Algorithms questions</a><a href='CS/questions/GATE_CS_Programming_and_Data_Structures.pdf' target='_blank' rel='noopener'>Programming and data structures questions</a><a href='CS/questions/GATE_CS_Engineering_Maths.pdf' target='_blank' rel='noopener'>Engineering maths questions</a></div>";
+      return;
+    }
     app.innerHTML = "<h1>Resources</h1><p class='sub'>PDFs from the repo. Past questions have no answer key; check them against the official GATE answer keys.</p>" +
       "<h2>Past questions + practice by subject</h2><div class='card res'>" + PDFS.map(function (p) { return "<a href='CS/questions/GATE_CS_" + p[0] + ".pdf' target='_blank' rel='noopener'>" + p[1] + "</a>"; }).join("") + "</div>" +
       "<h2>Study notes</h2><div class='card res'>" + PDFS.map(function (p) { return "<a href='CS/notes/GATE_CS_" + p[0] + "_Notes.pdf' target='_blank' rel='noopener'>" + p[1] + " — notes</a>"; }).join("") + "</div>" +
       "<h2>Other</h2><div class='card res'><a href='CS/STUDY_PLAN.md' target='_blank' rel='noopener'>14-week study plan</a><a href='CS/analysis/GATE_CS_Important_Topics.md' target='_blank' rel='noopener'>Important-topics analysis</a><a href='CS/analysis/GATE_CS_Topicwise_Questions.md' target='_blank' rel='noopener'>All past questions by topic</a></div>";
   }
 
+  var sw = document.getElementById("dsBtn");
+  if (sw) {
+    sw.textContent = DS === "DA" ? "Switch to CS" : "Switch to DA";
+    sw.onclick = function () { try { localStorage.setItem("gate27.ds", DS === "DA" ? "CS" : "DA"); } catch (e) {} location.reload(); };
+  }
+  var br = document.getElementById("brand"); if (br) br.innerHTML = "GATE " + DS + " <span>2027</span>";
+  document.title = "GATE " + DS + " 2027 Practice";
   nav("home");
 })();
