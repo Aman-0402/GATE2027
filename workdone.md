@@ -55,6 +55,9 @@ Commit `157101f` — one PDF per subject, each with past questions grouped by to
 One notes PDF per subject, named `GATE_CS_<Subject>_Notes.pdf` (same subjects as above): key formulas, concepts, shortcuts, common traps, exam strategy and a revision checklist.
 - Written from my own knowledge, not checked line by line against a textbook. Check the less common facts before relying on them.
 
+## 10. Study plan
+`STUDY_PLAN.md` — a 14-week plan from 2 Nov 2026 (subject-by-subject learning, full past papers, mocks and final revision). Assumes about 27 hours per week.
+
 ## Repo layout
 ```
 GATE2027/
