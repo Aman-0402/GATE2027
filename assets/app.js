@@ -3,8 +3,8 @@
   var DS = "DA";
   try { DS = localStorage.getItem("gate27.ds") || "DA"; } catch (e) {}
   if (DS !== "CS" && DS !== "DA") DS = "DA";
-  var Q = (DS === "CS" ? window.QUESTIONS : window.DA_QUESTIONS) || [];
-  var ALLQ = (window.QUESTIONS || []).concat(window.DA_QUESTIONS || []);
+  var Q = (DS === "CS" ? window.QUESTIONS : (window.DA_QUESTIONS || []).concat(window.GA_QUESTIONS || [])) || [];
+  var ALLQ = (window.QUESTIONS || []).concat(window.DA_QUESTIONS || [], window.GA_QUESTIONS || []);
   var BYID = {}; ALLQ.forEach(function (q) { BYID[q.id] = q; });
   var KEY = "gate27.v1";
   var app = document.getElementById("app");
@@ -95,7 +95,7 @@
   function renderHome() {
     var o = overall(), marked = Object.keys(S.marked).filter(function (k) { return S.marked[k] && BYID[k]; }).length;
     app.innerHTML =
-      (DS === "DA" ? "<h1>GATE DA 2027 practice</h1><p class='sub'>" + Q.length + " real past-paper questions (2026 and 2024) across " + SUBJECTS.length + " sections, shown as in the paper, with the official answer key. The 2024 key is not fully verified yet.</p>" : "<h1>GATE CS 2027 practice</h1><p class='sub'>" + Q.length + " original questions across " + SUBJECTS.length + " subjects, modelled on the 2016–2026 papers. MCQ, MSQ and NAT, with solutions.</p>") +
+      (DS === "DA" ? "<h1>GATE DA 2027 practice</h1><p class='sub'>" + Q.length + " questions across " + SUBJECTS.length + " sections: 129 real past-paper questions (2026 and 2024, shown as in the paper, official key; the 2024 key is not fully verified) plus " + (window.GA_QUESTIONS || []).length + " original General Aptitude practice questions with solutions.</p>" : "<h1>GATE CS 2027 practice</h1><p class='sub'>" + Q.length + " original questions across " + SUBJECTS.length + " subjects, modelled on the 2016–2026 papers. MCQ, MSQ and NAT, with solutions.</p>") +
       "<div class='grid'>" +
       "<div class='stat'><b>" + o.seen + "/" + Q.length + "</b><span>questions attempted</span></div>" +
       "<div class='stat'><b>" + pct(o.cor, o.att) + "%</b><span>accuracy (" + o.cor + "/" + o.att + ")</span></div>" +

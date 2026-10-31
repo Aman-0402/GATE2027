@@ -85,6 +85,11 @@ One notes PDF per subject, named `GATE_CS_<Subject>_Notes.pdf` (same subjects as
 
 - **Layout fixes:** below 760px the header shows a hamburger menu (Home, Practice, Progress, Resources, Switch DA/CS); the stat tiles are two per row; question images can be tapped to enlarge; images are trimmed of blank margins; the left question column scrolls if taller than the screen. Checked at 320, 390, 768, 1100, 1450 and 1920 px with no horizontal overflow.
 
+## 15. General Aptitude practice bank (480 questions)
+- 480 original MCQs with answers and solutions: 315 quantitative and reasoning (percentages, profit and loss, interest, ratio, time and work, speed, averages, ages, number system, series, probability, permutations, calendar and clocks, mensuration, code, direction, Venn, data interpretation) and 165 verbal (synonyms, antonyms, analogies, sentence completion and grammar, odd one out, syllogisms).
+- Quantitative answers were computed by code as the questions were generated, and 54 of them were re-checked by an independent brute-force script with no mismatches. Verbal answers were written by hand and reviewed once; a few words have close alternatives, so tell me if an answer looks arguable.
+- On the website: DA mode → Practice → "GA – Quantitative & Reasoning" or "GA – Verbal". Files: `assets/ga_questions.js` and `DA/questions/GATE_DA_General_Aptitude_Practice.md` (questions, answer key and solutions).
+
 ## Repo layout
 ```
 GATE2027/
