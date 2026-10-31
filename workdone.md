@@ -72,6 +72,9 @@ One notes PDF per subject, named `GATE_CS_<Subject>_Notes.pdf` (same subjects as
 - The repo is now split into `CS/` and `DA/`. Files were moved, not changed, so the commit history is preserved. The website's Resources links were updated to the new paths.
 - The DA papers could not be downloaded from this session. They are to be uploaded to `DA/papers/`.
 
+## 13. DA papers added
+`DA/papers/` now holds the GATE DA papers for 2024 (IISc Bengaluru, Set 1), 2025 (IIT Roorkee) and 2026 (IIT Guwahati), plus the official GATE 2027 DA syllabus (organising institute IIT Madras). Each paper has 65 questions (10 General Aptitude for 15 marks, 55 technical for 85 marks) and is text-extractable, so no OCR is needed. The files are question papers only: no answer keys yet.
+
 ## Repo layout
 ```
 GATE2027/
@@ -91,7 +94,7 @@ GATE2027/
 Note: earlier sections above name files by their old locations; they are now under `CS/` as shown here.
 
 ## Possible next steps
-- Upload the GATE DA papers (2024, 2025, 2026) to `DA/papers/`, then analyse them and build DA question PDFs, notes, a DA study plan and a DA version of the website.
+- Upload the official answer keys for the DA papers to `DA/papers/<year>/`. Then analyse the DA papers and build DA question PDFs, notes, a DA study plan and a DA version of the website.
 - Write Machine Learning and AI notes.
 - Replace the three textbook-style practice questions with fresh ones.
 - Add more practice questions for Tier 1 topics.
