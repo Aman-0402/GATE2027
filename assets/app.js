@@ -74,6 +74,7 @@
     render(); window.scrollTo(0, 0);
   }
   document.addEventListener("click", function (e) {
+    var im = e.target.closest(".qimg"); if (im) { window.open(im.getAttribute("src"), "_blank", "noopener"); return; }
     var n = e.target.closest("[data-nav]");
     if (n) { e.preventDefault(); if (sess && sess.mode === "test" && !sess.done && !confirm("Leave this test? Your answers will be lost.")) return; clearTimer(); sess = null; nav(n.getAttribute("data-nav")); }
   });
@@ -181,7 +182,7 @@
     var h = "<div class='prog'><span>Question " + (sess.i + 1) + " of " + n + "</span>" + (test ? "<span class='timer' id='timer'></span>" : "<span>" + esc(q.subjectName) + "</span>") + "</div>" +
       "<div class='bar2'><i style='width:" + pct(sess.i + (chk ? 1 : 0), n) + "%'></i></div>" +
       "<div class='card q qgrid'><div class='qleft'><div class='meta'><span class='chip t'>" + q.type + "</span><span class='chip'>" + q.marks + " mark" + (q.marks > 1 ? "s" : "") + "</span><span class='chip'>" + esc(q.topic) + "</span></div>" +
-      (q.context ? q.context : "") + q.question + (q.unverified ? "<p class='sub'>Key from the 2024 answer sheet, not yet double-checked.</p>" : "") + "</div><div class='qright'>";
+      (q.context ? q.context : "") + q.question + (q.paper ? "<p class='sub hint'>Tap the image to enlarge.</p>" : "") + (q.unverified ? "<p class='sub'>Key from the 2024 answer sheet, not yet double-checked.</p>" : "") + "</div><div class='qright'>";
     if (q.type === "NAT") {
       h += "<div class='nat'><label class='f'>Your answer (number)</label><input id='natIn' type='text' inputmode='decimal' autocomplete='off' value='" + esc(a === undefined ? "" : a) + "'" + (chk ? " disabled" : "") + "></div>";
     } else {
@@ -299,9 +300,17 @@
       "<h2>Other</h2><div class='card res'><a href='CS/STUDY_PLAN.md' target='_blank' rel='noopener'>14-week study plan</a><a href='CS/analysis/GATE_CS_Important_Topics.md' target='_blank' rel='noopener'>Important-topics analysis</a><a href='CS/analysis/GATE_CS_Topicwise_Questions.md' target='_blank' rel='noopener'>All past questions by topic</a></div>";
   }
 
+  var mb = document.getElementById("menuBtn"), mn = document.getElementById("mainNav");
+  function menu(open) { mn.classList.toggle("open", open); mb.setAttribute("aria-expanded", open ? "true" : "false"); }
+  mb.onclick = function (e) { e.stopPropagation(); menu(!mn.classList.contains("open")); };
+  mn.addEventListener("click", function () { menu(false); });
+  document.addEventListener("click", function (e) { if (!e.target.closest(".top")) menu(false); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") menu(false); });
+  window.addEventListener("resize", function () { if (innerWidth >= 760) menu(false); });
   var sw = document.getElementById("dsBtn");
   if (sw) {
     sw.textContent = DS === "DA" ? "Switch to CS" : "Switch to DA";
+    var nd = document.getElementById("navDs"); if (nd) { nd.textContent = sw.textContent; nd.onclick = function () { sw.onclick(); }; }
     sw.onclick = function () { try { localStorage.setItem("gate27.ds", DS === "DA" ? "CS" : "DA"); } catch (e) {} location.reload(); };
   }
   var br = document.getElementById("brand"); if (br) br.innerHTML = "GATE " + DS + " <span>2027</span>";

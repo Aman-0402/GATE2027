@@ -83,6 +83,8 @@ One notes PDF per subject, named `GATE_CS_<Subject>_Notes.pdf` (same subjects as
 - **Paper analysis:** `DA/analysis/GATE_DA_Paper_Analysis.md` (marks per section for 2026 and 2024).
 - **Notes:** `DA/notes/GATE_DA_Notes_ML_AI.pdf` and `GATE_DA_Notes_Maths_Programming_DB.pdf`, written from my own knowledge against the official syllabus; check the less common facts.
 
+- **Layout fixes:** below 760px the header shows a hamburger menu (Home, Practice, Progress, Resources, Switch DA/CS); the stat tiles are two per row; question images can be tapped to enlarge; images are trimmed of blank margins; the left question column scrolls if taller than the screen. Checked at 320, 390, 768, 1100, 1450 and 1920 px with no horizontal overflow.
+
 ## Repo layout
 ```
 GATE2027/
