@@ -95,6 +95,12 @@ One notes PDF per subject, named `GATE_CS_<Subject>_Notes.pdf` (same subjects as
 - Numerical answers were computed by code; a sample of NAT answers (18) was re-checked against scipy with no mismatches, and the Bayes questions against an independent calculation. NAT answers are accepted within half a unit of the last decimal.
 - Site: DA mode → Practice → Probability & Statistics (it shares this section with the real 2026/2024 questions; the topic filter separates them). Files: `assets/ps_questions.js`, `DA/questions/GATE_DA_Probability_Practice.md`.
 
+## 17. Practice sets for the remaining DA sections (1,044 questions)
+- Programming, DSA & Algorithms 279; Databases & Warehousing 146; Linear Algebra 125; Calculus & Optimisation 89; Machine Learning 129; Artificial Intelligence 116. All original, with solutions.
+- Answers were computed by code while generating (Python execution, SQLite, SymPy, NumPy/SciPy, NetworkX). A final check confirmed every question has valid options, one answer for MCQ, NAT answers inside their ranges, and no duplicate IDs.
+- With sections 15 and 16 the DA quiz now has 1,654 questions (129 real past + 1,525 original). Tested at 390 px and 1450 px: all sections start a quiz, no overflow, no console errors.
+- Files: `assets/{pd,db,la,co,ml,ai}_questions.js`, `DA/questions/GATE_DA_*_Practice.md`.
+
 ## Repo layout
 ```
 GATE2027/
@@ -116,6 +122,5 @@ Note: earlier sections above name files by their old locations; they are now und
 
 ## Possible next steps
 - Add the 2025 DA paper to the quiz once its answer key is attached; double-check the 2024 key against the official PDF.
-- Add new original DA practice questions (ML, AI, Probability) with solutions, and DA question PDFs.
 - Full-length timed DA mock from the 129 questions (65 questions, 3 hours).
 - CS: answer keys for the past questions (for your friend); OCR fixes for 2019 and 2021.

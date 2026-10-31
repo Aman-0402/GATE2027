@@ -4,10 +4,10 @@ Material for GATE 2027, organised by paper. I am sitting the **Data Science & AI
 
 ```
 .
-├── index.html, assets/, .nojekyll   Practice website (plain HTML/CSS/JS). DA mode: 129 past questions (2026, 2024) + 480 original General Aptitude and 161 original Probability & Statistics questions; CS mode: 95 practice questions.
+├── index.html, assets/, .nojekyll   Practice website (plain HTML/CSS/JS). DA mode: 129 past questions (2026, 2024) + 1525 original practice questions covering every DA section; CS mode: 95 practice questions.
 ├── DA/                              Data Science & AI (my paper)
 │   ├── papers/                      GATE DA papers (2024, 2025, 2026), answer keys (2024, 2026), syllabus, study plan, analysis and notes
-│   ├── questions/                   Topic-wise past questions + practice (to be built)
+│   ├── questions/                   Original practice questions per DA section, with solutions
 │   └── notes/                       Study notes (to be built)
 ├── CS/                              Computer Science
 │   ├── papers/                      GATE CS papers 2016–2026 by year, plus the CS 2027 syllabus
