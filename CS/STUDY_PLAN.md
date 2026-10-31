@@ -1,6 +1,6 @@
 # GATE CS 2027 — 14-Week Study Plan
 
-> This plan is for the **CS** paper. You are taking **DA**, so a new plan is needed once the DA papers are analysed.
+> This plan is for the **CS** paper. The DA plan is in [`../DA/STUDY_PLAN.md`](../DA/STUDY_PLAN.md).
 
 **Assumptions:** start Monday 2 Nov 2026; first reported exam day is 6 Feb 2027 (confirm your paper date on the official GATE site). About 3 hours on weekdays and 6 hours on weekends (~27 hrs/week). If you have more time, add it to Phase 1 and the mocks. The weights come from `CS/analysis/GATE_CS_Important_Topics.md`.
 

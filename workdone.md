@@ -107,24 +107,23 @@ One notes PDF per subject, named `GATE_CS_<Subject>_Notes.pdf` (same subjects as
 - **2024 key now verified:** all 64 scored questions of the 2024 paper were solved independently (figure questions from the paper images) and match the key; the "not double-checked" notice is removed. The site's answers match both key files exactly (2024: 64, 2026: 65).
 - **Redesign:** graph-paper "rough sheet" look, navy ink, Bricolage Grotesque headings and Lexend body text. The home page shows the paper to scale (a block per section, sized by average marks, shaded by your progress; tap a block to practise it), a countdown to 6 Feb 2027 (earliest reported exam date), and answer options as answer-sheet bubbles. Checked at 390 px and 1450 px, light and dark, with no overflow or console errors.
 
+## 19. Repo reorganised (1 November 2026)
+- Website files split by kind: `assets/css/`, `assets/js/`, `assets/data/` (question banks), `assets/img/`. The site stays at the repo root, so the GitHub Pages address is unchanged.
+- DA notes sources moved to `DA/notes/source/`. Answer-check scripts added in `tools/verify/` (`bash tools/verify/run_all.sh`; all report 0 mismatches).
+- README files rewritten: root (start-here table and full layout), `DA/`, `DA/papers/`, `CS/` (new), `tools/verify/`. `CS/STUDY_PLAN.md` now points to the DA plan. Added `.gitignore`.
+- Checked: every relative link in the 24 Markdown files, the site and the 129 question images resolves; site tested at 390 px and 1450 px.
+
 ## Repo layout
 ```
 GATE2027/
-├── README.md, workdone.md
-├── index.html, assets/, .nojekyll      practice website (129 DA past questions + 95 CS practice questions)
-├── DA/
-│   ├── papers/      2024/2025/2026 papers, keys (2024, 2026), syllabus
-│   ├── analysis/    GATE_DA_Paper_Analysis.md
-│   ├── notes/       2 notes PDFs (+ .md sources)
-│   └── STUDY_PLAN.md
-└── CS/
-    ├── papers/      CS papers 2016–2026 by year + syllabus
-    ├── questions/   GATE_CS_<Subject>.pdf (10 subjects)
-    ├── notes/       GATE_CS_<Subject>_Notes.pdf (10 subjects)
-    ├── analysis/    Important_Topics, Topicwise_Questions, Practice_Questions (.md)
-    └── STUDY_PLAN.md
+├── README.md, workdone.md, .gitignore
+├── index.html, .nojekyll           practice website
+├── assets/  css/  js/  data/  img/
+├── DA/      STUDY_PLAN.md  papers/  questions/  notes/ (+ source/)  analysis/
+├── CS/      STUDY_PLAN.md  papers/  questions/  notes/  analysis/
+└── tools/verify/                    answer-check scripts
 ```
-Note: earlier sections above name files by their old locations; they are now under `CS/` as shown here.
+Note: earlier sections name some files by their old locations (for example `assets/app.js`, or CS files before they moved into `CS/`); the layout above is current.
 
 ## Possible next steps
 - Add the 2025 DA paper to the quiz once its answer key is attached; double-check the 2024 key against the official PDF.

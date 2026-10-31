@@ -1,7 +1,13 @@
 # GATE DA 2027 (Data Science & AI)
 
-Sections (approximate marks of 100, from [Careers360](https://engineering.careers360.com/articles/gate-2027-data-science-and-artificial-intelligence-syllabus-da-important-topics); confirm in the official brochure):
-General Aptitude 15 · Programming, Data Structures & Algorithms 21 · Probability & Statistics 16 · Machine Learning 11 · Artificial Intelligence 11 · Linear Algebra 10 · Calculus & Optimisation 8 · Database Management & Warehousing 8.
+| Folder / file | Contents |
+|---|---|
+| [STUDY_PLAN.md](STUDY_PLAN.md) | 14-week plan from 2 Nov 2026, weighted by past-paper marks |
+| [papers/](papers/) | 2024 (Set 1), 2025 and 2026 papers; answer keys for 2024 and 2026 (PDF/JSON); 2027 syllabus |
+| [questions/](questions/) | Original practice questions with answers and solutions, one file per section |
+| [notes/](notes/) | Notes PDFs (ML & AI; maths, programming & databases) with Markdown sources |
+| [analysis/](analysis/) | Marks per section in the 2024 and 2026 papers |
 
-Folders: `papers/` (put the DA question papers and answer keys here, one folder per year), `questions/`, `notes/`.
-Reusable CS material: Databases, data structures and algorithms (`../CS/`).
+Average marks per section (2024 and 2026 papers): Probability & Statistics 17.5, Programming/DSA 17, General Aptitude 15, Machine Learning 12.5, Databases & Warehousing 12.5, Linear Algebra 11, AI 8.5, Calculus & Optimisation 5.
+
+Related CS material: databases, algorithms and data-structure PDFs in [`../CS/questions/`](../CS/questions/).
