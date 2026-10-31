@@ -100,7 +100,7 @@
       "<button class='btn ghost' data-quick='test'>Timed mini test (20 questions)</button>" +
       "<button class='btn ghost' data-quick='wrong'" + (o.wrong ? "" : " disabled") + ">Revise mistakes (" + o.wrong + ")</button>" +
       "<button class='btn ghost' data-quick='new'>Unattempted only</button></div>" +
-      "<h2>Practice by subject</h2><div class='card'>" + SUBJECTS.map(function (s) {
+      "<h2>Practice by subject</h2><div class='card cols'>" + SUBJECTS.map(function (s) {
         var qs = Q.filter(function (q) { return q.subject === s.id; });
         var seen = qs.filter(function (q) { return S.stats[q.id]; }).length;
         return "<div class='tr'><div class='n'><a href='#' data-subj='" + s.id + "'>" + esc(s.name) + "</a><br><small>" + seen + "/" + qs.length + " attempted</small></div><div class='p'><div class='bar2'><i style='width:" + pct(seen, qs.length) + "%'></i></div></div></div>";
@@ -175,8 +175,8 @@
     var q = sess.qs[sess.i], n = sess.qs.length, a = sess.ans[q.id], chk = !!sess.checked[q.id], test = sess.mode === "test";
     var h = "<div class='prog'><span>Question " + (sess.i + 1) + " of " + n + "</span>" + (test ? "<span class='timer' id='timer'></span>" : "<span>" + esc(q.subjectName) + "</span>") + "</div>" +
       "<div class='bar2'><i style='width:" + pct(sess.i + (chk ? 1 : 0), n) + "%'></i></div>" +
-      "<div class='card q'><div class='meta'><span class='chip t'>" + q.type + "</span><span class='chip'>" + q.marks + " mark" + (q.marks > 1 ? "s" : "") + "</span><span class='chip'>" + esc(q.topic) + "</span></div>" +
-      (q.context ? q.context : "") + q.question;
+      "<div class='card q qgrid'><div class='qleft'><div class='meta'><span class='chip t'>" + q.type + "</span><span class='chip'>" + q.marks + " mark" + (q.marks > 1 ? "s" : "") + "</span><span class='chip'>" + esc(q.topic) + "</span></div>" +
+      (q.context ? q.context : "") + q.question + "</div><div class='qright'>";
     if (q.type === "NAT") {
       h += "<div class='nat'><label class='f'>Your answer (number)</label><input id='natIn' type='text' inputmode='decimal' autocomplete='off' value='" + esc(a === undefined ? "" : a) + "'" + (chk ? " disabled" : "") + "></div>";
     } else {
@@ -196,7 +196,7 @@
     if (sess.i > 0 && test) h += "<button class='btn ghost' id='prevBtn'>Previous</button>";
     if (test || chk) h += (sess.i < n - 1 ? "<button class='btn' id='nextBtn'>Next</button>" : "<button class='btn' id='finBtn'>Finish</button>");
     if (test && sess.i < n - 1) h += "<button class='btn ghost' id='finBtn'>Submit test</button>";
-    h += "<button class='btn ghost' id='markBtn'>" + (S.marked[q.id] ? "★ Bookmarked" : "☆ Bookmark") + "</button></div></div>";
+    h += "<button class='btn ghost' id='markBtn'>" + (S.marked[q.id] ? "★ Bookmarked" : "☆ Bookmark") + "</button></div></div></div>";
     app.innerHTML = h; tick();
     var nat = document.getElementById("natIn");
     if (nat) { nat.oninput = function () { sess.ans[q.id] = nat.value; }; nat.onkeydown = function (ev) { if (ev.key === "Enter") { var b = document.getElementById("checkBtn") || document.getElementById("nextBtn"); if (b) b.click(); } }; if (!chk) nat.focus(); }
@@ -234,7 +234,7 @@
       "<div class='grid'><div class='stat'><b>" + right2(r.right, n) + "</b><span>correct</span></div>" +
       (test ? "<div class='stat'><b>" + (Math.round(r.got * 100) / 100) + " / " + r.total + "</b><span>marks (with negative marking)</span></div>" : "") +
       "<div class='stat'><b>" + pct(r.right, n) + "%</b><span>accuracy</span></div></div>" +
-      "<h2>Review</h2><div class='card'>" + sess.qs.map(function (q, i) {
+      "<h2>Review</h2><div class='card cols'>" + sess.qs.map(function (q, i) {
         var a = sess.ans[q.id], ok = isCorrect(q, a), sk = !answered(q, a);
         return "<div class='tr'><div class='n'><b>" + (i + 1) + ".</b> " + esc(q.topic) + "<br><small>" + q.type + " · " + q.marks + "m · " + (sk ? "skipped" : ok ? "correct" : "wrong") + " · answer: " + esc(fmtAnswer(q)) + "</small></div><button class='btn ghost' data-rev='" + i + "'>View</button></div>";
       }).join("") + "</div><div class='btns'><button class='btn' data-nav='practice'>New session</button><button class='btn ghost' data-nav='home'>Home</button></div><div id='revBox'></div>";
@@ -267,7 +267,7 @@
     weak.sort(function (a, b) { return a.acc - b.acc; });
     app.innerHTML = "<h1>Progress</h1><div class='grid'>" +
       "<div class='stat'><b>" + o.seen + "/" + Q.length + "</b><span>attempted</span></div><div class='stat'><b>" + pct(o.cor, o.att) + "%</b><span>overall accuracy</span></div><div class='stat'><b>" + S.tests.length + "</b><span>sessions finished</span></div></div>" +
-      "<h2>By subject</h2><div class='card'>" + rows.map(function (r) {
+      "<h2>By subject</h2><div class='card cols'>" + rows.map(function (r) {
         return "<div class='tr'><div class='n'>" + esc(r.s.name) + "<br><small>" + r.seen + "/" + r.tot + " attempted · " + (r.at ? r.acc + "% accuracy" : "no attempts") + "</small></div><div class='p'><div class='bar2'><i style='width:" + (r.at ? r.acc : 0) + "%'></i></div></div></div>";
       }).join("") + "</div>" +
       "<h2>Weakest topics</h2><div class='card'>" + (weak.length ? weak.slice(0, 8).map(function (w) { return "<div class='tr'><div class='n'>" + esc(w.t) + "<br><small>" + w.at + " attempts</small></div><b>" + w.acc + "%</b></div>"; }).join("") : "<p class='sub' style='margin:0'>Attempt some questions to see your weak topics.</p>") + "</div>" +
