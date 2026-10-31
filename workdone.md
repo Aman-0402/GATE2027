@@ -90,6 +90,11 @@ One notes PDF per subject, named `GATE_CS_<Subject>_Notes.pdf` (same subjects as
 - Quantitative answers were computed by code as the questions were generated, and 54 of them were re-checked by an independent brute-force script with no mismatches. Verbal answers were written by hand and reviewed once; a few words have close alternatives, so tell me if an answer looks arguable.
 - On the website: DA mode → Practice → "GA – Quantitative & Reasoning" or "GA – Verbal". Files: `assets/ga_questions.js` and `DA/questions/GATE_DA_General_Aptitude_Practice.md` (questions, answer key and solutions).
 
+## 16. Probability & Statistics practice (161 questions)
+- 161 original questions (94 MCQ, 57 NAT, 10 MSQ) with solutions: Bayes, conditional and basic probability, counting, expectation and variance, binomial, Poisson, geometric, exponential, uniform, normal and CLT, confidence intervals and z/t statistics, descriptive statistics, covariance and correlation, joint distributions, and true/false concept statements.
+- Numerical answers were computed by code; a sample of NAT answers (18) was re-checked against scipy with no mismatches, and the Bayes questions against an independent calculation. NAT answers are accepted within half a unit of the last decimal.
+- Site: DA mode → Practice → Probability & Statistics (it shares this section with the real 2026/2024 questions; the topic filter separates them). Files: `assets/ps_questions.js`, `DA/questions/GATE_DA_Probability_Practice.md`.
+
 ## Repo layout
 ```
 GATE2027/
