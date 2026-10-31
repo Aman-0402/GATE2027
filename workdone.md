@@ -34,12 +34,25 @@ Commit `440de14` — `GATE_CS_Practice_Questions.md`
 - Web research gave context only, not question text. It covered the reported exam dates (6, 7, 13, 14, 20 and 21 February 2027) and the areas coaching blogs called hardest in 2026. Confirm the dates against the official GATE 2027 brochure.
 - Sources: [Careers360](https://engineering.careers360.com/articles/gate-2027), [GATE CS 2026 analysis](https://gateatzeal.com/blogs/?p=2057), [PW Live](https://www.pw.live/exams/gate/gate-cs-important-topics/).
 
+## 6. Engineering Mathematics question PDF
+Commit `1862e5d` — `GATE_CS_Engineering_Maths.pdf` (22 pages)
+- All 150 past Engineering Mathematics questions (2016–2026, 222 marks) grouped by the 7 topics, newest first.
+- The 14 new practice questions (2 per topic) with step-by-step solutions.
+- Past questions have no answer key. Text came from extraction and OCR, so fractions and figures may be garbled. Entries from scanned papers are marked `[OCR]`.
+
+## 7. Engineering Mathematics study notes
+Commit `ce3df2b` — `GATE_CS_Engineering_Maths_Notes.pdf` (13 pages)
+- Notes for all 7 topics: formulas, theorems, shortcuts, common traps, exam strategy and a revision checklist.
+- Written from my own knowledge, not checked line by line against a textbook. Check the less common formulas before relying on them.
+
 ## Repo layout
 ```
 GATE2027/
 ├── GATE_CS_Important_Topics.md
 ├── GATE_CS_Topicwise_Questions.md
 ├── GATE_CS_Practice_Questions.md
+├── GATE_CS_Engineering_Maths.pdf
+├── GATE_CS_Engineering_Maths_Notes.pdf
 ├── workdone.md
 └── pAPER/
     ├── CS_GATE2027_Syllabus.pdf
@@ -49,5 +62,6 @@ GATE2027/
 ## Possible next steps
 - Replace the three textbook-style practice questions with fresh ones.
 - Add more practice questions for Tier 1 topics.
+- Make the same question PDF and notes for the other 9 subjects.
 - Build full-length mock papers of 65 questions that follow the real GATE mark distribution.
 - Fix the OCR gaps in 2019 and 2021 so every paper totals 85 marks.
