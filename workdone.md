@@ -45,23 +45,35 @@ Commit `ce3df2b` — `GATE_CS_Engineering_Maths_Notes.pdf` (13 pages)
 - Notes for all 7 topics: formulas, theorems, shortcuts, common traps, exam strategy and a revision checklist.
 - Written from my own knowledge, not checked line by line against a textbook. Check the less common formulas before relying on them.
 
+## 8. Question PDFs for the other 9 subjects
+Commit `157101f` — one PDF per subject, each with past questions grouped by topic (most marks first) plus the new practice questions with solutions:
+`GATE_CS_Programming_and_Data_Structures.pdf`, `GATE_CS_Algorithms.pdf`, `GATE_CS_Theory_of_Computation.pdf`, `GATE_CS_Compiler_Design.pdf`, `GATE_CS_Operating_System.pdf`, `GATE_CS_Computer_Networks.pdf`, `GATE_CS_Computer_Organization.pdf`, `GATE_CS_Databases.pdf`, `GATE_CS_Digital_Logic.pdf`.
+- The practice questions are the same ones as in `GATE_CS_Practice_Questions.md`, with the short solutions given there.
+- Past questions have no answer key. Code, tables and figures may be flattened by text extraction; scanned-paper entries are marked `[OCR]`.
+
+## 9. Study notes for the other 9 subjects
+One notes PDF per subject, named `GATE_CS_<Subject>_Notes.pdf` (same subjects as above): key formulas, concepts, shortcuts, common traps, exam strategy and a revision checklist.
+- Written from my own knowledge, not checked line by line against a textbook. Check the less common facts before relying on them.
+
 ## Repo layout
 ```
 GATE2027/
 ├── GATE_CS_Important_Topics.md
 ├── GATE_CS_Topicwise_Questions.md
 ├── GATE_CS_Practice_Questions.md
-├── GATE_CS_Engineering_Maths.pdf
-├── GATE_CS_Engineering_Maths_Notes.pdf
+├── GATE_CS_<Subject>.pdf          (10 subjects: past questions + practice with solutions)
+├── GATE_CS_<Subject>_Notes.pdf    (10 subjects: study notes)
 ├── workdone.md
 └── pAPER/
     ├── CS_GATE2027_Syllabus.pdf
     └── 2016 … 2026/   (CS papers by year)
 ```
+Subjects: Engineering_Maths, Programming_and_Data_Structures, Algorithms, Theory_of_Computation, Compiler_Design, Operating_System, Computer_Networks, Computer_Organization, Databases, Digital_Logic.
 
 ## Possible next steps
 - Replace the three textbook-style practice questions with fresh ones.
 - Add more practice questions for Tier 1 topics.
-- Make the same question PDF and notes for the other 9 subjects.
+- Add the General Aptitude section (15 marks per paper).
+- Fill in answer keys for the past questions.
 - Build full-length mock papers of 65 questions that follow the real GATE mark distribution.
 - Fix the OCR gaps in 2019 and 2021 so every paper totals 85 marks.
