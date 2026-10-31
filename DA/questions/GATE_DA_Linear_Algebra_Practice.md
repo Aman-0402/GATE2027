@@ -1,6 +1,6 @@
 # GATE DA — Linear Algebra practice (original)
 
-125 original questions (MCQ, MSQ and NAT) with answers and solutions. Numerical answers were computed exactly with SymPy and cross-checked against NumPy while generating (determinant, rank, solutions, singular values).
+125 original questions (MCQ, MSQ and NAT) with answers and solutions. Numerical answers were computed exactly with SymPy and cross-checked against NumPy while generating (determinant, rank, solutions, singular values). All answers were re-verified independently on 1 November 2026 (see workdone.md).
 
 
 ## Determinant & trace
@@ -110,7 +110,7 @@
 
 ## Projection & special matrices
 
-**LA43.** [NAT, 2 marks] The matrix I − (1/5)·11ᵀ is an 5×5 projection matrix (1 is the all-ones vector). Its rank is ______.
+**LA43.** [NAT, 2 marks] The matrix I − (1/5)·11ᵀ is a 5×5 projection matrix (1 is the all-ones vector). Its rank is ______.
 
 **LA44.** [MCQ, 1 mark] The only possible eigenvalues of a real projection matrix P (with P² = P) are
 
@@ -119,11 +119,11 @@
 (C) any real numbers  
 (D) −1 and 1
 
-**LA45.** [NAT, 2 marks] The matrix I − (1/3)·11ᵀ is an 3×3 projection matrix (1 is the all-ones vector). Its rank is ______.
+**LA45.** [NAT, 2 marks] The matrix I − (1/3)·11ᵀ is a 3×3 projection matrix (1 is the all-ones vector). Its rank is ______.
 
 **LA46.** [NAT, 2 marks] P = u·uᵀ/(uᵀu) with u = (1, 3) is a projection matrix. Its trace is ______.
 
-**LA47.** [NAT, 2 marks] The matrix I − (1/6)·11ᵀ is an 6×6 projection matrix (1 is the all-ones vector). Its rank is ______.
+**LA47.** [NAT, 2 marks] The matrix I − (1/6)·11ᵀ is a 6×6 projection matrix (1 is the all-ones vector). Its rank is ______.
 
 **LA48.** [NAT, 2 marks] P = u·uᵀ/(uᵀu) with u = (3, 3) is a projection matrix. Its trace is ______.
 

@@ -1,6 +1,6 @@
 # GATE DA — Programming, DSA & Algorithms practice (original)
 
-279 original questions (MCQ, MSQ and NAT) with answers and solutions. Python-tracing answers were produced by running the code shown; the algorithm questions (sorting, trees, hashing, graphs) were computed by code and a sample was re-checked with independent implementations, with no mismatches.
+279 original questions (MCQ, MSQ and NAT) with answers and solutions. Python-tracing answers were produced by running the code shown; the algorithm questions (sorting, trees, hashing, graphs) were computed by code and a sample was re-checked with independent implementations, with no mismatches. All answers were re-verified independently on 1 November 2026 (see workdone.md).
 
 
 ## Complexity & recurrences
@@ -309,7 +309,7 @@ while i < n:
 
 **PD43.** [NAT, 1 mark] An undirected graph has vertices 0 to 5 and edges (0,1), (2,5). The number of connected components is ______.
 
-**PD44.** [NAT, 2 marks] A directed acyclic graph has vertices A, B, C, D and edges no edges. The number of distinct topological orderings is ______.
+**PD44.** [NAT, 2 marks] A directed acyclic graph has vertices A, B, C, D and no edges. The number of distinct topological orderings is ______.
 
 **PD45.** [NAT, 2 marks] A directed acyclic graph has vertices A, B, C, D and edges A→D, B→D. The number of distinct topological orderings is ______.
 
@@ -385,7 +385,7 @@ print(push(7))
 
 (A) [7] | [7, 2] | [1] | [7, 2, 7]  
 (B) [7] | [2] | [1] | [7]  
-(C) ]7 ,2 ,7[  | ]1[  | ]2 ,7[  | ]7[  
+(C) [7] | [7, 2] | [1] | [7]  
 (D) [7] | [7, 2] | [7, 2, 1] | [7, 2, 1, 7]
 
 **PD63.** [MCQ, 2 marks] What is printed by the following program? (Lines are separated by | in the options.)
@@ -403,7 +403,7 @@ print(add(8))
 (A) [8] | [8, 1] | [8, 1, 4] | [8, 1, 4, 8]  
 (B) [8] | [1] | [4] | [8]  
 (C) [8] | [8, 1] | [4] | [8, 1, 8]  
-(D) ]8 ,1 ,8[  | ]4[  | ]1 ,8[  | ]8[
+(D) [8] | [8, 1] | [4] | [8]
 
 **PD64.** [MCQ, 2 marks] What is printed by the following program? (Lines are separated by | in the options.)
 ```
@@ -420,7 +420,7 @@ print(add(3))
 (A) [3] | [2] | [8] | [3]  
 (B) [3] | [3, 2] | [3, 2, 8] | [3, 2, 8, 3]  
 (C) [3] | [3, 2] | [8] | [3, 2, 3]  
-(D) ]3 ,2 ,3[  | ]8[  | ]2 ,3[  | ]3[
+(D) [3] | [3, 2] | [8] | [3]
 
 **PD65.** [MCQ, 2 marks] What is printed by the following program? (Lines are separated by | in the options.)
 ```
@@ -434,7 +434,7 @@ print(put(1, []))
 print(put(5))
 ```
 
-(A) ]5 ,3 ,5[  | ]1[  | ]3 ,5[  | ]5[  
+(A) [5] | [5, 3] | [1] | [5]  
 (B) [5] | [5, 3] | [5, 3, 1] | [5, 3, 1, 5]  
 (C) [5] | [5, 3] | [1] | [5, 3, 5]  
 (D) [5] | [3] | [1] | [5]
@@ -451,7 +451,7 @@ print(put(6, []))
 print(put(7))
 ```
 
-(A) ]7 ,3 ,7[  | ]6[  | ]3 ,7[  | ]7[  
+(A) [7] | [7, 3] | [6] | [7]  
 (B) [7] | [3] | [6] | [7]  
 (C) [7] | [7, 3] | [7, 3, 6] | [7, 3, 6, 7]  
 (D) [7] | [7, 3] | [6] | [7, 3, 7]
@@ -468,7 +468,7 @@ print(put(6, []))
 print(put(2))
 ```
 
-(A) ]2 ,7 ,2[  | ]6[  | ]7 ,2[  | ]2[  
+(A) [2] | [2, 7] | [6] | [2]  
 (B) [2] | [2, 7] | [2, 7, 6] | [2, 7, 6, 2]  
 (C) [2] | [2, 7] | [6] | [2, 7, 2]  
 (D) [2] | [7] | [6] | [2]

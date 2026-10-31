@@ -1,6 +1,6 @@
 # GATE DA — Artificial Intelligence practice (original)
 
-116 original questions (MCQ, MSQ and NAT) with answers and solutions. Search, minimax, logic and Bayesian-network answers were computed by code; a sample of d-separation answers was re-checked with NetworkX and the alpha–beta counts with an independent recursive implementation, with no mismatches.
+116 original questions (MCQ, MSQ and NAT) with answers and solutions. Search, minimax, logic and Bayesian-network answers were computed by code; a sample of d-separation answers was re-checked with NetworkX and the alpha–beta counts with an independent recursive implementation, with no mismatches. All answers were re-verified independently on 1 November 2026 (see workdone.md).
 
 
 ## Adversarial search

@@ -1,6 +1,6 @@
 # GATE DA — Calculus & Optimisation practice (original)
 
-89 original questions (MCQ, MSQ and NAT) with answers and solutions. Answers were computed symbolically with SymPy; derivative answers and limits were re-checked by re-parsing the printed question, with no mismatches.
+89 original questions (MCQ, MSQ and NAT) with answers and solutions. Answers were computed symbolically with SymPy; derivative answers and limits were re-checked by re-parsing the printed question, with no mismatches. All answers were re-verified independently on 1 November 2026 (see workdone.md).
 
 
 ## Derivatives & Taylor series
@@ -91,20 +91,20 @@
 
 **CO24.** [NAT, 2 marks] Gradient descent with step size 1/2 is applied to f(x) = 4x², starting at x₀ = 4. After 1 update, x equals ______ (2 decimals).
 
-**CO25.** [NAT, 2 marks] Gradient descent with step size 1/5 is applied to f(x) = 1x², starting at x₀ = 2. After 1 update, x equals ______ (2 decimals).
+**CO25.** [NAT, 2 marks] Gradient descent with step size 1/5 is applied to f(x) = x², starting at x₀ = 2. After 1 update, x equals ______ (2 decimals).
 
-**CO26.** [NAT, 2 marks] Gradient descent with step size 1/5 is applied to f(x) = 1x², starting at x₀ = 5. After 3 updates, x equals ______ (2 decimals).
+**CO26.** [NAT, 2 marks] Gradient descent with step size 1/5 is applied to f(x) = x², starting at x₀ = 5. After 3 updates, x equals ______ (2 decimals).
 
-**CO27.** [NAT, 2 marks] Gradient descent with step size 1/10 is applied to f(x) = 1x², starting at x₀ = 10. After 1 update, x equals ______ (2 decimals).
+**CO27.** [NAT, 2 marks] Gradient descent with step size 1/10 is applied to f(x) = x², starting at x₀ = 10. After 1 update, x equals ______ (2 decimals).
 
 **CO28.** [NAT, 2 marks] Gradient descent with step size 1/4 is applied to f(x) = 4x², starting at x₀ = 10. After 2 updates, x equals ______ (2 decimals).
 
-**CO29.** [MCQ, 2 marks] Gradient descent on f(x) = 1x² converges to 0 from any starting point iff the step size η satisfies
+**CO29.** [MCQ, 2 marks] Gradient descent on f(x) = x² converges to 0 from any starting point iff the step size η satisfies
 
-(A) 0 < η < 1/1  
+(A) 0 < η < 1  
 (B) 0 < η < 1/2  
 (C) 0 < η < 2/1  
-(D) η > 1/1
+(D) η > 1
 
 **CO30.** [MCQ, 2 marks] Gradient descent on f(x) = 4x² converges to 0 from any starting point iff the step size η satisfies
 

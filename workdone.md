@@ -101,6 +101,12 @@ One notes PDF per subject, named `GATE_CS_<Subject>_Notes.pdf` (same subjects as
 - With sections 15 and 16 the DA quiz now has 1,654 questions (129 real past + 1,525 original). Tested at 390 px and 1450 px: all sections start a quiz, no overflow, no console errors.
 - Files: `assets/{pd,db,la,co,ml,ai}_questions.js`, `DA/questions/GATE_DA_*_Practice.md`.
 
+## 18. Answer re-verification and site redesign (1 November 2026)
+- **Every answer re-checked with a second, independent method.** Python-tracing questions were re-run from the code as printed (107/107 matched); SQL questions re-run in SQLite from the printed tables (34/34). Every numerical template in Linear Algebra, Calculus, Probability, DSA, Databases, ML, AI and quantitative GA was re-solved by a separate checker that reads the printed question (SymPy, NumPy/SciPy, NetworkX, brute force). One instance of each template, every concept/MSQ question and all 165 verbal GA questions were checked by hand.
+- **Result:** 1 wrong answer in 1,525 original questions. GA213 said ₹800 sold for ₹919 is a 15% profit (it is 14.875%); the price is now ₹920. DB24 (one-to-one relationship) now states total participation on both sides, so 1 table is the only right answer. Wording fixes: "3th" → "3rd", "an 5×5", "1x²", "0 < η < 1/1", "1 heads", the analogy prompt ("Choose the word…"), and 6 garbled reversed-text distractors replaced.
+- **2024 key now verified:** all 64 scored questions of the 2024 paper were solved independently (figure questions from the paper images) and match the key; the "not double-checked" notice is removed. The site's answers match both key files exactly (2024: 64, 2026: 65).
+- **Redesign:** graph-paper "rough sheet" look, navy ink, Bricolage Grotesque headings and Lexend body text. The home page shows the paper to scale (a block per section, sized by average marks, shaded by your progress; tap a block to practise it), a countdown to 6 Feb 2027 (earliest reported exam date), and answer options as answer-sheet bubbles. Checked at 390 px and 1450 px, light and dark, with no overflow or console errors.
+
 ## Repo layout
 ```
 GATE2027/

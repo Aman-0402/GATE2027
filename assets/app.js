@@ -92,26 +92,40 @@
     return { seen: seen, att: att, cor: cor, wrong: wrong };
   }
 
+  // Average marks per section in the real papers (DA: 2024 + 2026 analysis; CS: 2016-2026 analysis, plus 15 for GA)
+  var WEIGHTS = DS === "DA"
+    ? [["Probability & Statistics", 17.5, ["P"], "Probability & Stats"], ["Programming, DSA & Algorithms", 17, ["D"], "Programming & DSA"], ["General Aptitude", 15, ["GQ", "G", "GV"], "Aptitude"], ["Machine Learning", 12.5, ["M"], "Machine Learning"], ["Databases & Warehousing", 12.5, ["B"], "Databases"], ["Linear Algebra", 11, ["L"], "Linear Algebra"], ["Artificial Intelligence", 8.5, ["I"], "AI"], ["Calculus & Optimisation", 5, ["C"], "Calculus"]]
+    : [["Engineering Mathematics", 14.8, ["EM"], "Maths"], ["Programming & Data Structures", 10.7, ["PDS"], "Programming & DS"], ["Operating System", 8.5, ["OS"], "OS"], ["Computer Networks", 8.1, ["CN"], "Networks"], ["Theory of Computation", 7.7, ["TOC"], "TOC"], ["Computer Organization", 7.5, ["CO"], "COA"], ["Algorithms", 7.3, ["ALG"], "Algorithms"], ["Databases", 7, ["DB"], "DBMS"], ["Digital Logic", 6.9, ["DL"], "Digital"], ["Compiler Design", 5.9, ["CD"], "Compilers"]];
+  var EXAM = new Date(2027, 1, 6);
+  var ORDER = [].concat.apply([], WEIGHTS.map(function (w) { return w[2]; }));
+  SUBJECTS.sort(function (a, b) { var i = ORDER.indexOf(a.id), j = ORDER.indexOf(b.id); return (i < 0 ? 99 : i) - (j < 0 ? 99 : j); });
   function renderHome() {
     var o = overall(), marked = Object.keys(S.marked).filter(function (k) { return S.marked[k] && BYID[k]; }).length;
+    var days = Math.ceil((EXAM - new Date()) / 864e5);
+    var segs = WEIGHTS.map(function (w) {
+      var qs = Q.filter(function (q) { return w[2].indexOf(q.subject) >= 0; });
+      var seen = qs.filter(function (q) { return S.stats[q.id]; }).length;
+      return "<button class='seg' style='--w:" + w[1] + ";--f:" + pct(seen, qs.length) + "%' data-subj='" + w[2][0] + "' title='" + esc(w[0]) + ": " + seen + " of " + qs.length + " attempted'><span class='mk'>" + w[1] + "</span><span class='nm'>" + esc(w[3]) + "</span></button>";
+    }).join("");
     app.innerHTML =
-      (DS === "DA" ? "<h1>GATE DA 2027 practice</h1><p class='sub'>" + Q.length + " questions across " + SUBJECTS.length + " sections: 129 real past-paper questions (2026 and 2024, shown as in the paper, official key; the 2024 key is not fully verified) plus " + (Q.length - 129) + " original practice questions with solutions, covering every DA section.</p>" : "<h1>GATE CS 2027 practice</h1><p class='sub'>" + Q.length + " original questions across " + SUBJECTS.length + " subjects, modelled on the 2016–2026 papers. MCQ, MSQ and NAT, with solutions.</p>") +
-      "<div class='grid'>" +
-      "<div class='stat'><b>" + o.seen + "/" + Q.length + "</b><span>questions attempted</span></div>" +
-      "<div class='stat'><b>" + pct(o.cor, o.att) + "%</b><span>accuracy (" + o.cor + "/" + o.att + ")</span></div>" +
-      "<div class='stat'><b>" + o.wrong + "</b><span>to revise (last attempt wrong)</span></div>" +
-      "<div class='stat'><b>" + marked + "</b><span>bookmarked</span></div></div>" +
-      "<h2>Quick start</h2><div class='btns'>" +
-      "<button class='btn' data-quick='mixed'>10 mixed questions</button>" +
-      "<button class='btn ghost' data-quick='test'>Timed mini test (20 questions)</button>" +
-      "<button class='btn ghost' data-quick='wrong'" + (o.wrong ? "" : " disabled") + ">Revise mistakes (" + o.wrong + ")</button>" +
-      "<button class='btn ghost' data-quick='new'>Unattempted only</button></div>" +
-      "<h2>Practice by subject</h2><div class='card cols'>" + SUBJECTS.map(function (s) {
+      "<div class='hero'><h1>GATE " + DS + " 2027</h1>" + (days > 0 ? "<p class='count'><b>" + days + "</b> days until 6 Feb 2027, the earliest reported exam date</p>" : "") + "</div>" +
+      "<div class='map'><div class='mapbar'>" + segs + "</div>" +
+      "<p class='mapcap'>The paper, drawn to scale: each block is a section, sized by its average marks in past papers" + (DS === "DA" ? " (2024 and 2026)" : " (2016–2026)") + ". The shading shows how much of it you have attempted. Select a block to practise it.</p></div>" +
+      "<ul class='figs'><li><b>" + o.seen + "</b><span>of " + Q.length + " questions attempted</span></li>" +
+      "<li><b>" + pct(o.cor, o.att) + "%</b><span>accuracy (" + o.cor + " of " + o.att + ")</span></li>" +
+      "<li><b>" + o.wrong + "</b><span>wrong last time</span></li>" +
+      "<li><b>" + marked + "</b><span>bookmarked</span></li></ul>" +
+      "<div class='home2'><div><h2>Start</h2><div class='acts'>" +
+      "<button class='btn' data-quick='mixed'>10 mixed questions<small>Instant feedback after each answer</small></button>" +
+      "<button class='btn ghost' data-quick='test'>Timed test, 20 questions<small>GATE marking, results at the end</small></button>" +
+      "<button class='btn ghost' data-quick='wrong'" + (o.wrong ? "" : " disabled") + ">Revise mistakes (" + o.wrong + ")<small>Questions you got wrong last time</small></button>" +
+      "<button class='btn ghost' data-quick='new'>10 new questions<small>Only ones you have not tried</small></button></div></div>" +
+      "<div><h2>Sections</h2><div class='card'>" + SUBJECTS.map(function (s) {
         var qs = Q.filter(function (q) { return q.subject === s.id; });
         var seen = qs.filter(function (q) { return S.stats[q.id]; }).length;
-        return "<div class='tr'><div class='n'><a href='#' data-subj='" + s.id + "'>" + esc(s.name) + "</a><br><small>" + seen + "/" + qs.length + " attempted</small></div><div class='p'><div class='bar2'><i style='width:" + pct(seen, qs.length) + "%'></i></div></div></div>";
-      }).join("") + "</div>" +
-      "<p class='sub'>Marking in timed tests follows GATE: MCQ −⅓ mark per wrong 1-mark answer (−⅔ for 2 marks); MSQ and NAT have no negative marking.</p>";
+        return "<div class='tr'><div class='n'><a href='#' data-subj='" + s.id + "'>" + esc(s.name) + "</a><br><small>" + seen + " of " + qs.length + " attempted</small></div><div class='p'><div class='bar2'><i style='width:" + pct(seen, qs.length) + "%'></i></div></div></div>";
+      }).join("") + "</div></div></div>" +
+      "<p class='note'>Timed tests use GATE marking: a wrong MCQ costs ⅓ of its marks (−⅓ for 1 mark, −⅔ for 2 marks); MSQ and NAT have no negative marking.</p>";
   }
 
   function renderSetup() {
@@ -179,18 +193,18 @@
   }
   function renderQuiz() {
     var q = sess.qs[sess.i], n = sess.qs.length, a = sess.ans[q.id], chk = !!sess.checked[q.id], test = sess.mode === "test";
-    var h = "<div class='prog'><span>Question " + (sess.i + 1) + " of " + n + "</span>" + (test ? "<span class='timer' id='timer'></span>" : "<span>" + esc(q.subjectName) + "</span>") + "</div>" +
+    var h = "<div class='prog'><span>Question <b>" + (sess.i + 1) + "</b> of " + n + "</span>" + (test ? "<span class='timer' id='timer'></span>" : "<span>" + esc(q.subjectName) + "</span>") + "</div>" +
       "<div class='bar2'><i style='width:" + pct(sess.i + (chk ? 1 : 0), n) + "%'></i></div>" +
       "<div class='card q qgrid'><div class='qleft'><div class='meta'><span class='chip t'>" + q.type + "</span><span class='chip'>" + q.marks + " mark" + (q.marks > 1 ? "s" : "") + "</span><span class='chip'>" + esc(q.topic) + "</span></div>" +
-      (q.context ? q.context : "") + q.question + (q.paper ? "<p class='sub hint'>Tap the image to enlarge.</p>" : "") + (q.unverified ? "<p class='sub'>Key from the 2024 answer sheet, not yet double-checked.</p>" : "") + "</div><div class='qright'>";
+      (q.context ? q.context : "") + q.question + (q.paper ? "<p class='sub hint'>Tap the image to enlarge.</p>" : "") + "" + "</div><div class='qright'>";
     if (q.type === "NAT") {
       h += "<div class='nat'><label class='f'>Your answer (number)</label><input id='natIn' type='text' inputmode='decimal' autocomplete='off' value='" + esc(a === undefined ? "" : a) + "'" + (chk ? " disabled" : "") + "></div>";
     } else {
       if (q.type === "MSQ") h += "<p class='sub'>Select all that apply.</p>";
       h += q.options.map(function (o) {
-        var sel = a && a.indexOf(o.k) >= 0, cls = "opt" + (sel ? " sel" : "");
+        var sel = a && a.indexOf(o.k) >= 0, cls = "opt" + (q.type === "MSQ" ? " msq" : "") + (sel ? " sel" : "");
         if (chk) { var right = q.answer.indexOf(o.k) >= 0; if (right) cls += " ok"; else if (sel) cls += " no"; }
-        return "<label class='" + cls + "'><input type='" + (q.type === "MSQ" ? "checkbox" : "radio") + "' name='opt' value='" + o.k + "'" + (sel ? " checked" : "") + (chk ? " disabled" : "") + "><span class='k'>" + o.k + ".</span><span>" + o.t + "</span></label>";
+        return "<label class='" + cls + "'><input type='" + (q.type === "MSQ" ? "checkbox" : "radio") + "' name='opt' value='" + o.k + "'" + (sel ? " checked" : "") + (chk ? " disabled" : "") + "><span class='k'>" + o.k + "</span><span>" + o.t + "</span></label>";
       }).join("");
     }
     if (chk) {

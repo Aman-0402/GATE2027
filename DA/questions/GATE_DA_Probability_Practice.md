@@ -1,6 +1,6 @@
 # GATE DA — Probability & Statistics practice (original)
 
-161 original questions (MCQ, MSQ and NAT) with answers and solutions. Numerical answers were computed by code and a sample of the NAT answers was re-checked against scipy/numpy with no mismatches. NAT answers are accepted within ±0.5 of the last decimal place.
+161 original questions (MCQ, MSQ and NAT) with answers and solutions. Numerical answers were computed by code and a sample of the NAT answers was re-checked against scipy/numpy with no mismatches. NAT answers are accepted within ±0.5 of the last decimal place. All answers were re-verified independently on 1 November 2026 (see workdone.md).
 
 
 ## Basic probability
@@ -151,7 +151,7 @@
 
 ## Binomial & Poisson
 
-**PS21.** [NAT, 2 marks] A biased coin has P(head) = 2/3. It is tossed 5 times. The probability of exactly 1 heads is ______ (rounded to 3 decimals).
+**PS21.** [NAT, 2 marks] A biased coin has P(head) = 2/3. It is tossed 5 times. The probability of exactly 1 head is ______ (rounded to 3 decimals).
 
 **PS22.** [NAT, 1 mark] X ~ Binomial(n = 18, p = 1/3). The variance of X is ______ (2 decimals).
 
@@ -178,7 +178,7 @@
 
 **PS26.** [NAT, 1 mark] X ~ Binomial(n = 30, p = 1/2). The variance of X is ______ (2 decimals).
 
-**PS27.** [NAT, 2 marks] A biased coin has P(head) = 1/2. It is tossed 5 times. The probability of exactly 1 heads is ______ (rounded to 3 decimals).
+**PS27.** [NAT, 2 marks] A biased coin has P(head) = 1/2. It is tossed 5 times. The probability of exactly 1 head is ______ (rounded to 3 decimals).
 
 **PS28.** [NAT, 1 mark] X ~ Binomial(n = 18, p = 1/4). The variance of X is ______ (2 decimals).
 
@@ -221,21 +221,21 @@
 (C) 9  
 (D) 12
 
-**PS41.** [MCQ, 1 mark] A fair-looking trial succeeds with probability 1/2 each time, independently. The expected number of trials needed to get the first success is
+**PS41.** [MCQ, 1 mark] A trial succeeds with probability 1/2 each time, independently. The expected number of trials needed to get the first success is
 
 (A) 1/2  
 (B) 3  
 (C) 2  
 (D) 1
 
-**PS42.** [MCQ, 1 mark] A fair-looking trial succeeds with probability 1/4 each time, independently. The expected number of trials needed to get the first success is
+**PS42.** [MCQ, 1 mark] A trial succeeds with probability 1/4 each time, independently. The expected number of trials needed to get the first success is
 
 (A) 3  
 (B) 4  
 (C) 1/4  
 (D) 4/3
 
-**PS43.** [MCQ, 1 mark] A fair-looking trial succeeds with probability 1/3 each time, independently. The expected number of trials needed to get the first success is
+**PS43.** [MCQ, 1 mark] A trial succeeds with probability 1/3 each time, independently. The expected number of trials needed to get the first success is
 
 (A) 4  
 (B) 3  
@@ -346,7 +346,7 @@
 (C) 28/45  
 (D) 1/50
 
-**PS58.** [MCQ, 1 mark] A fair coin is tossed 4 times. The probability of getting at least 4 heads is
+**PS58.** [MCQ, 1 mark] A fair coin is tossed 4 times. The probability of getting 4 heads (all heads) is
 
 (A) 1  
 (B) 1/2  

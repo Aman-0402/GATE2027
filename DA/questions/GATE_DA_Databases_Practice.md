@@ -1,6 +1,6 @@
 # GATE DA — Databases & Warehousing practice (original)
 
-146 original questions (MCQ, MSQ and NAT) with answers and solutions. SQL and relational-algebra answers were obtained by executing the queries in SQLite; functional-dependency, normal-form and key questions were computed by code (the normal-form routine was cross-checked against a brute-force implementation on 3000 random schemas with no mismatch).
+146 original questions (MCQ, MSQ and NAT) with answers and solutions. SQL and relational-algebra answers were obtained by executing the queries in SQLite; functional-dependency, normal-form and key questions were computed by code (the normal-form routine was cross-checked against a brute-force implementation on 3000 random schemas with no mismatch). All answers were re-verified independently on 1 November 2026 (see workdone.md).
 
 
 ## Data warehousing
@@ -89,7 +89,7 @@
 (C) 2  
 (D) 1
 
-**DB24.** [MCQ, 2 marks] The minimum number of relational tables needed to represent a one-to-one relationship between E1 and E2 (merging allowed), with all attributes kept, is
+**DB24.** [MCQ, 2 marks] The minimum number of relational tables needed to represent a one-to-one relationship between E1 and E2, with total participation of both E1 and E2 (merging allowed), with all attributes kept, is
 
 (A) 1  
 (B) 3  

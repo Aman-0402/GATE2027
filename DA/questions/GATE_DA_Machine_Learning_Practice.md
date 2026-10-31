@@ -1,6 +1,6 @@
 # GATE DA — Machine Learning practice (original)
 
-129 original questions (MCQ, MSQ and NAT) with answers and solutions. Numerical answers were computed with NumPy; a sample (entropy, Gini, ridge, PCA, regression, classification metrics) was re-checked against SciPy/NumPy by re-parsing the printed question, with no mismatches.
+129 original questions (MCQ, MSQ and NAT) with answers and solutions. Numerical answers were computed with NumPy; a sample (entropy, Gini, ridge, PCA, regression, classification metrics) was re-checked against SciPy/NumPy by re-parsing the printed question, with no mismatches. All answers were re-verified independently on 1 November 2026 (see workdone.md).
 
 
 ## Clustering & PCA

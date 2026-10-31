@@ -1965,7 +1965,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q1.png' alt='GATE DA 2024 question 1' loading='lazy'>",
 "paper": "GATE DA 2024 Q.1",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -1999,7 +1999,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q2.png' alt='GATE DA 2024 question 2' loading='lazy'>",
 "paper": "GATE DA 2024 Q.2",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -2033,7 +2033,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q3.png' alt='GATE DA 2024 question 3' loading='lazy'>",
 "paper": "GATE DA 2024 Q.3",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -2067,7 +2067,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q4.png' alt='GATE DA 2024 question 4' loading='lazy'>",
 "paper": "GATE DA 2024 Q.4",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -2101,7 +2101,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q5.png' alt='GATE DA 2024 question 5' loading='lazy'>",
 "paper": "GATE DA 2024 Q.5",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -2135,7 +2135,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q6.png' alt='GATE DA 2024 question 6' loading='lazy'>",
 "paper": "GATE DA 2024 Q.6",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -2169,7 +2169,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q7.png' alt='GATE DA 2024 question 7' loading='lazy'>",
 "paper": "GATE DA 2024 Q.7",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -2203,7 +2203,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q8.png' alt='GATE DA 2024 question 8' loading='lazy'>",
 "paper": "GATE DA 2024 Q.8",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -2237,7 +2237,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q9.png' alt='GATE DA 2024 question 9' loading='lazy'>",
 "paper": "GATE DA 2024 Q.9",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -2271,7 +2271,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q10.png' alt='GATE DA 2024 question 10' loading='lazy'>",
 "paper": "GATE DA 2024 Q.10",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -2305,7 +2305,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q11.png' alt='GATE DA 2024 question 11' loading='lazy'>",
 "paper": "GATE DA 2024 Q.11",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -2339,7 +2339,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q12.png' alt='GATE DA 2024 question 12' loading='lazy'>",
 "paper": "GATE DA 2024 Q.12",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -2373,7 +2373,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q13.png' alt='GATE DA 2024 question 13' loading='lazy'>",
 "paper": "GATE DA 2024 Q.13",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -2407,7 +2407,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q14.png' alt='GATE DA 2024 question 14' loading='lazy'>",
 "paper": "GATE DA 2024 Q.14",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -2441,7 +2441,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q15.png' alt='GATE DA 2024 question 15' loading='lazy'>",
 "paper": "GATE DA 2024 Q.15",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -2475,7 +2475,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q16.png' alt='GATE DA 2024 question 16' loading='lazy'>",
 "paper": "GATE DA 2024 Q.16",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -2509,7 +2509,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q17.png' alt='GATE DA 2024 question 17' loading='lazy'>",
 "paper": "GATE DA 2024 Q.17",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -2543,7 +2543,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q18.png' alt='GATE DA 2024 question 18' loading='lazy'>",
 "paper": "GATE DA 2024 Q.18",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -2577,7 +2577,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q19.png' alt='GATE DA 2024 question 19' loading='lazy'>",
 "paper": "GATE DA 2024 Q.19",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -2611,7 +2611,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q20.png' alt='GATE DA 2024 question 20' loading='lazy'>",
 "paper": "GATE DA 2024 Q.20",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -2645,7 +2645,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q21.png' alt='GATE DA 2024 question 21' loading='lazy'>",
 "paper": "GATE DA 2024 Q.21",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -2679,7 +2679,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q22.png' alt='GATE DA 2024 question 22' loading='lazy'>",
 "paper": "GATE DA 2024 Q.22",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -2713,7 +2713,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q23.png' alt='GATE DA 2024 question 23' loading='lazy'>",
 "paper": "GATE DA 2024 Q.23",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -2747,7 +2747,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q24.png' alt='GATE DA 2024 question 24' loading='lazy'>",
 "paper": "GATE DA 2024 Q.24",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -2781,7 +2781,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q25.png' alt='GATE DA 2024 question 25' loading='lazy'>",
 "paper": "GATE DA 2024 Q.25",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -2815,7 +2815,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q26.png' alt='GATE DA 2024 question 26' loading='lazy'>",
 "paper": "GATE DA 2024 Q.26",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -2849,7 +2849,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q27.png' alt='GATE DA 2024 question 27' loading='lazy'>",
 "paper": "GATE DA 2024 Q.27",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -2883,7 +2883,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q28.png' alt='GATE DA 2024 question 28' loading='lazy'>",
 "paper": "GATE DA 2024 Q.28",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -2919,7 +2919,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q29.png' alt='GATE DA 2024 question 29' loading='lazy'>",
 "paper": "GATE DA 2024 Q.29",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -2955,7 +2955,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q30.png' alt='GATE DA 2024 question 30' loading='lazy'>",
 "paper": "GATE DA 2024 Q.30",
-"unverified": true,
+"unverified": false,
 "range": [
 0.0,
 0.0
@@ -2974,7 +2974,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q31.png' alt='GATE DA 2024 question 31' loading='lazy'>",
 "paper": "GATE DA 2024 Q.31",
-"unverified": true,
+"unverified": false,
 "range": [
 3.0,
 3.0
@@ -2993,7 +2993,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q32.png' alt='GATE DA 2024 question 32' loading='lazy'>",
 "paper": "GATE DA 2024 Q.32",
-"unverified": true,
+"unverified": false,
 "range": [
 17.0,
 17.0
@@ -3012,7 +3012,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q33.png' alt='GATE DA 2024 question 33' loading='lazy'>",
 "paper": "GATE DA 2024 Q.33",
-"unverified": true,
+"unverified": false,
 "range": [
 0.24,
 0.24
@@ -3031,7 +3031,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q34.png' alt='GATE DA 2024 question 34' loading='lazy'>",
 "paper": "GATE DA 2024 Q.34",
-"unverified": true,
+"unverified": false,
 "range": [
 42.0,
 42.0
@@ -3050,7 +3050,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q35.png' alt='GATE DA 2024 question 35' loading='lazy'>",
 "paper": "GATE DA 2024 Q.35",
-"unverified": true,
+"unverified": false,
 "range": [
 0.0,
 0.0
@@ -3069,7 +3069,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q36.png' alt='GATE DA 2024 question 36' loading='lazy'>",
 "paper": "GATE DA 2024 Q.36",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -3103,7 +3103,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q37.png' alt='GATE DA 2024 question 37' loading='lazy'>",
 "paper": "GATE DA 2024 Q.37",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -3137,7 +3137,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q38.png' alt='GATE DA 2024 question 38' loading='lazy'>",
 "paper": "GATE DA 2024 Q.38",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -3171,7 +3171,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q39.png' alt='GATE DA 2024 question 39' loading='lazy'>",
 "paper": "GATE DA 2024 Q.39",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -3205,7 +3205,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q40.png' alt='GATE DA 2024 question 40' loading='lazy'>",
 "paper": "GATE DA 2024 Q.40",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -3239,7 +3239,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q41.png' alt='GATE DA 2024 question 41' loading='lazy'>",
 "paper": "GATE DA 2024 Q.41",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -3273,7 +3273,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q42.png' alt='GATE DA 2024 question 42' loading='lazy'>",
 "paper": "GATE DA 2024 Q.42",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -3307,7 +3307,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q43.png' alt='GATE DA 2024 question 43' loading='lazy'>",
 "paper": "GATE DA 2024 Q.43",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -3341,7 +3341,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q44.png' alt='GATE DA 2024 question 44' loading='lazy'>",
 "paper": "GATE DA 2024 Q.44",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -3375,7 +3375,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q45.png' alt='GATE DA 2024 question 45' loading='lazy'>",
 "paper": "GATE DA 2024 Q.45",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -3409,7 +3409,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q46.png' alt='GATE DA 2024 question 46' loading='lazy'>",
 "paper": "GATE DA 2024 Q.46",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -3445,7 +3445,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q47.png' alt='GATE DA 2024 question 47' loading='lazy'>",
 "paper": "GATE DA 2024 Q.47",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -3480,7 +3480,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q48.png' alt='GATE DA 2024 question 48' loading='lazy'>",
 "paper": "GATE DA 2024 Q.48",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -3515,7 +3515,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q49.png' alt='GATE DA 2024 question 49' loading='lazy'>",
 "paper": "GATE DA 2024 Q.49",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -3551,7 +3551,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q50.png' alt='GATE DA 2024 question 50' loading='lazy'>",
 "paper": "GATE DA 2024 Q.50",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -3586,7 +3586,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q51.png' alt='GATE DA 2024 question 51' loading='lazy'>",
 "paper": "GATE DA 2024 Q.51",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -3621,7 +3621,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q52.png' alt='GATE DA 2024 question 52' loading='lazy'>",
 "paper": "GATE DA 2024 Q.52",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -3657,7 +3657,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q53.png' alt='GATE DA 2024 question 53' loading='lazy'>",
 "paper": "GATE DA 2024 Q.53",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -3692,7 +3692,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q54.png' alt='GATE DA 2024 question 54' loading='lazy'>",
 "paper": "GATE DA 2024 Q.54",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -3727,7 +3727,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q55.png' alt='GATE DA 2024 question 55' loading='lazy'>",
 "paper": "GATE DA 2024 Q.55",
-"unverified": true,
+"unverified": false,
 "options": [
 {
 "k": "A",
@@ -3762,7 +3762,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q56.png' alt='GATE DA 2024 question 56' loading='lazy'>",
 "paper": "GATE DA 2024 Q.56",
-"unverified": true,
+"unverified": false,
 "range": [
 0.125,
 0.125
@@ -3781,7 +3781,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q57.png' alt='GATE DA 2024 question 57' loading='lazy'>",
 "paper": "GATE DA 2024 Q.57",
-"unverified": true,
+"unverified": false,
 "range": [
 0.2,
 0.2
@@ -3800,7 +3800,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q58.png' alt='GATE DA 2024 question 58' loading='lazy'>",
 "paper": "GATE DA 2024 Q.58",
-"unverified": true,
+"unverified": false,
 "range": [
 0.25,
 0.25
@@ -3819,7 +3819,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q60.png' alt='GATE DA 2024 question 60' loading='lazy'>",
 "paper": "GATE DA 2024 Q.60",
-"unverified": true,
+"unverified": false,
 "range": [
 0.5,
 0.5
@@ -3838,7 +3838,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q61.png' alt='GATE DA 2024 question 61' loading='lazy'>",
 "paper": "GATE DA 2024 Q.61",
-"unverified": true,
+"unverified": false,
 "range": [
 55.0,
 55.0
@@ -3857,7 +3857,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q62.png' alt='GATE DA 2024 question 62' loading='lazy'>",
 "paper": "GATE DA 2024 Q.62",
-"unverified": true,
+"unverified": false,
 "range": [
 0.12,
 0.13
@@ -3876,7 +3876,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q63.png' alt='GATE DA 2024 question 63' loading='lazy'>",
 "paper": "GATE DA 2024 Q.63",
-"unverified": true,
+"unverified": false,
 "range": [
 5.0,
 5.0
@@ -3895,7 +3895,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q64.png' alt='GATE DA 2024 question 64' loading='lazy'>",
 "paper": "GATE DA 2024 Q.64",
-"unverified": true,
+"unverified": false,
 "range": [
 0.125,
 0.125
@@ -3914,7 +3914,7 @@ window.DA_QUESTIONS = [
 "context": "",
 "question": "<img class='qimg' src='assets/img/da2024/q65.png' alt='GATE DA 2024 question 65' loading='lazy'>",
 "paper": "GATE DA 2024 Q.65",
-"unverified": true,
+"unverified": false,
 "range": [
 0.062,
 0.063
