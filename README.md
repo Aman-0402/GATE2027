@@ -1,15 +1,24 @@
-# GATE CS 2027
+# GATE 2027 preparation
 
-Preparation material for GATE CS 2027, built from the 2016–2026 papers in `pAPER/`.
+Material for GATE 2027, organised by paper. I am sitting the **Data Science & AI (DA)** paper; the earlier **CS** material is kept in `CS/` because some of it overlaps (databases, data structures and algorithms, probability, linear algebra).
 
-- **Practice website:** open `index.html` (plain HTML, CSS and JS). 95 original MCQ/MSQ/NAT questions with solutions, practice and timed modes, progress tracking.
-- **Per-subject PDFs:** `GATE_CS_<Subject>.pdf` (past questions by topic + practice with solutions) and `GATE_CS_<Subject>_Notes.pdf` (study notes).
-- **Analysis:** `GATE_CS_Important_Topics.md`, `GATE_CS_Topicwise_Questions.md`, `GATE_CS_Practice_Questions.md`.
-- **Plan:** `STUDY_PLAN.md` (14 weeks).
-- **Log:** `workdone.md`.
+```
+.
+├── index.html, assets/, .nojekyll   Practice website (plain HTML/CSS/JS). Currently holds 95 CS questions.
+├── DA/                              Data Science & AI (my paper)
+│   ├── papers/                      GATE DA question papers and answer keys (2024, 2025, 2026): add here
+│   ├── questions/                   Topic-wise past questions + practice (to be built)
+│   └── notes/                       Study notes (to be built)
+├── CS/                              Computer Science
+│   ├── papers/                      GATE CS papers 2016–2026 by year, plus the CS 2027 syllabus
+│   ├── questions/                   GATE_CS_<Subject>.pdf: past questions by topic + practice with solutions
+│   ├── notes/                       GATE_CS_<Subject>_Notes.pdf: study notes
+│   ├── analysis/                    Important topics, topic-wise questions, practice questions (Markdown)
+│   └── STUDY_PLAN.md                14-week CS plan
+└── workdone.md                      Log of everything done so far
+```
 
-Past questions have no answer key; check them against the official GATE answer keys. Confirm exam dates and pattern on the official GATE 2027 site.
-
-## Publish the website
-
-Repo → Settings → Pages → Deploy from a branch → `main` / `(root)`. The site and the PDFs are then served from the same address.
+## Notes
+- Past questions have no answer key; check them against the official GATE answer keys.
+- Confirm the exam dates, pattern and syllabus on the official GATE 2027 site.
+- The website is published from the repo root with GitHub Pages (Settings → Pages → `main` / root).

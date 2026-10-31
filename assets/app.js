@@ -282,9 +282,9 @@
   var PDFS = [["Engineering_Maths", "Engineering Mathematics"], ["Programming_and_Data_Structures", "Programming & Data Structures"], ["Algorithms", "Algorithms"], ["Theory_of_Computation", "Theory of Computation"], ["Compiler_Design", "Compiler Design"], ["Operating_System", "Operating System"], ["Computer_Networks", "Computer Networks"], ["Computer_Organization", "Computer Organization & Architecture"], ["Databases", "Databases"], ["Digital_Logic", "Digital Logic"]];
   function renderResources() {
     app.innerHTML = "<h1>Resources</h1><p class='sub'>PDFs from the repo. Past questions have no answer key; check them against the official GATE answer keys.</p>" +
-      "<h2>Past questions + practice by subject</h2><div class='card res'>" + PDFS.map(function (p) { return "<a href='GATE_CS_" + p[0] + ".pdf' target='_blank' rel='noopener'>" + p[1] + "</a>"; }).join("") + "</div>" +
-      "<h2>Study notes</h2><div class='card res'>" + PDFS.map(function (p) { return "<a href='GATE_CS_" + p[0] + "_Notes.pdf' target='_blank' rel='noopener'>" + p[1] + " — notes</a>"; }).join("") + "</div>" +
-      "<h2>Other</h2><div class='card res'><a href='STUDY_PLAN.md' target='_blank' rel='noopener'>14-week study plan</a><a href='GATE_CS_Important_Topics.md' target='_blank' rel='noopener'>Important-topics analysis</a><a href='GATE_CS_Topicwise_Questions.md' target='_blank' rel='noopener'>All past questions by topic</a></div>";
+      "<h2>Past questions + practice by subject</h2><div class='card res'>" + PDFS.map(function (p) { return "<a href='CS/questions/GATE_CS_" + p[0] + ".pdf' target='_blank' rel='noopener'>" + p[1] + "</a>"; }).join("") + "</div>" +
+      "<h2>Study notes</h2><div class='card res'>" + PDFS.map(function (p) { return "<a href='CS/notes/GATE_CS_" + p[0] + "_Notes.pdf' target='_blank' rel='noopener'>" + p[1] + " — notes</a>"; }).join("") + "</div>" +
+      "<h2>Other</h2><div class='card res'><a href='CS/STUDY_PLAN.md' target='_blank' rel='noopener'>14-week study plan</a><a href='CS/analysis/GATE_CS_Important_Topics.md' target='_blank' rel='noopener'>Important-topics analysis</a><a href='CS/analysis/GATE_CS_Topicwise_Questions.md' target='_blank' rel='noopener'>All past questions by topic</a></div>";
   }
 
   nav("home");

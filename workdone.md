@@ -66,25 +66,33 @@ One notes PDF per subject, named `GATE_CS_<Subject>_Notes.pdf` (same subjects as
 - Progress is saved in the browser only (localStorage). A Resources page links the PDFs and the study plan.
 - The 818 past questions are not in the quiz yet because they have no answer keys.
 
+## 12. Switch to the DA paper and repo reorganisation
+- You are taking the **GATE DA (Data Science & AI)** paper, not CS. All material above is for CS. Overlap with DA: databases, data structures and algorithms, probability, linear algebra, calculus. Not needed for DA: OS, networks, theory of computation, compiler design, computer organization, digital logic, discrete maths.
+- Machine Learning and AI (about 22 of 100 marks) are not covered yet.
+- The repo is now split into `CS/` and `DA/`. Files were moved, not changed, so the commit history is preserved. The website's Resources links were updated to the new paths.
+- The DA papers could not be downloaded from this session. They are to be uploaded to `DA/papers/`.
+
 ## Repo layout
 ```
 GATE2027/
-├── GATE_CS_Important_Topics.md
-├── GATE_CS_Topicwise_Questions.md
-├── GATE_CS_Practice_Questions.md
-├── GATE_CS_<Subject>.pdf          (10 subjects: past questions + practice with solutions)
-├── GATE_CS_<Subject>_Notes.pdf    (10 subjects: study notes)
-├── STUDY_PLAN.md
-├── index.html, assets/            (practice website)
-├── README.md
-├── workdone.md
-└── pAPER/
-    ├── CS_GATE2027_Syllabus.pdf
-    └── 2016 … 2026/   (CS papers by year)
+├── README.md, workdone.md
+├── index.html, assets/, .nojekyll      practice website (95 CS questions for now)
+├── DA/
+│   ├── papers/      (upload the DA papers here)
+│   ├── questions/   (to be built)
+│   └── notes/       (to be built)
+└── CS/
+    ├── papers/      CS papers 2016–2026 by year + syllabus
+    ├── questions/   GATE_CS_<Subject>.pdf (10 subjects)
+    ├── notes/       GATE_CS_<Subject>_Notes.pdf (10 subjects)
+    ├── analysis/    Important_Topics, Topicwise_Questions, Practice_Questions (.md)
+    └── STUDY_PLAN.md
 ```
-Subjects: Engineering_Maths, Programming_and_Data_Structures, Algorithms, Theory_of_Computation, Compiler_Design, Operating_System, Computer_Networks, Computer_Organization, Databases, Digital_Logic.
+Note: earlier sections above name files by their old locations; they are now under `CS/` as shown here.
 
 ## Possible next steps
+- Upload the GATE DA papers (2024, 2025, 2026) to `DA/papers/`, then analyse them and build DA question PDFs, notes, a DA study plan and a DA version of the website.
+- Write Machine Learning and AI notes.
 - Replace the three textbook-style practice questions with fresh ones.
 - Add more practice questions for Tier 1 topics.
 - Add the General Aptitude section (15 marks per paper).
